@@ -1,9 +1,9 @@
 {
   "mappings": [
-    "/content/HDFCLoans/:/"
+    "/content/hdfcloans/:/"
   ],
   "includes": [
-    "/content/HDFCLoans",
+    "/content/hdfcloans",
     "/content/dam/"
   ]
 }
