@@ -4,6 +4,7 @@
   ],
   "includes": [
     "/content/hdfc",
-    "/content/dam/"
+    "/content/dam/",
+    "/content/forms"
   ]
 }
