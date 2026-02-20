@@ -55,5 +55,11 @@
         "embed-adaptive-form"
       ]
     }
+  ],
+  "styles":[
+    {
+      "name":"Offers Page",
+      "class":"pl-offer-page"
+    }
   ]
 }
