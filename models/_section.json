@@ -33,6 +33,10 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "PL Offers Page",
+              "value": "pl-offers-page"
             }
           ]
         }
@@ -54,12 +58,6 @@
         "form",
         "embed-adaptive-form"
       ]
-    }
-  ],
-  "styles":[
-    {
-      "name":"Offers Page",
-      "class":"pl-offer-page"
     }
   ]
 }
