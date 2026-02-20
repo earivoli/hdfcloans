@@ -780,7 +780,7 @@ main div.form-wrapper {
     background: white;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 24px rgb(0 0 0 / 8%);
+    /* box-shadow: 0 4px 24px rgb(0 0 0 / 8%); */
 }
 
 /* Responsive adjustments for mobile */
@@ -801,4 +801,179 @@ main div.form-wrapper {
 /* Expand height for multi-select dropdowns (array types) */
 main .form form select[multiple] {
     height: calc(42px + 50px);
+}
+
+/* custom styles for Capstone */
+
+
+@media (min-width: 1024px) {  
+
+main .form.block form{
+    gap:12px !important;
+}
+
+/* Global Margin Set */
+.dropdown-2a01ff1480-description,
+.section.fragment-container .fragment-wrapper,
+.section.fragment-container .field-country-mobile-panel .field-mobilenumber,
+.section.fragment-container .field-country-mobile-panel .field-mobilenumber input[type="number"]
+.form.block .date-wrapper.field-dob.field-wrapper.col-3 input[type="text"]
+{
+    margin: 0;
+}
+.field-countrycode{
+    margin:0 !important;
+}
+
+.fragment-container .fragment-wrapper .fragment.block.form-container{
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    margin-top: 16px;
+}
+.section.fragment-container.columns-container .fragment-container .fragment-wrapper .fragment.block.form-container{
+    position: relative;
+}
+.section.fragment-container.columns-container .fragment-container .fragment-wrapper .fragment.block.form-container::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 2.5%;
+    right: 2.5%;
+    height: 2px;
+    background: gray;
+}
+
+.section.fragment-container .fragment-wrapper{
+    max-width: 1400px;
+}
+.section.fragment-container input,#dropdown-2a01ff1480,dropdown-2a01ff1480{
+    border: 2px solid grey;
+}
+.section.fragment-container .field-country-mobile-panel .field-mobilenumber input[type="text"]
+{
+    width: 280px;
+    position: relative;
+    left: 30%;
+    border-left: none;
+    height: 50px;
+    border-radius: 0;
+    padding: 25px;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    margin-right: 5px;
+    padding-right: 10px;
+    letter-spacing: 10px;
+    font-size: 20px !important;
+}
+.field-otp-input input[type="text"]
+{
+    height: 60px;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    letter-spacing: 80px;
+    font-size: 20px !important;
+    border-radius: 16px;
+    text-align: center;
+}
+.field-otp-input input[type="text"]::placeholder
+{
+    text-align: start;
+    letter-spacing: 25px;
+   font-size: 60px;
+}
+.section.fragment-container .field-country-mobile-panel .field-mobilenumber input[type="text"]::placeholder{
+    font-size: 1rem;
+    letter-spacing: 0;
+}
+
+#dropdown-2a01ff1480{
+    border-right: none;
+    height: 53.2px;
+    width: 72px;
+    border-radius: 0;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+
+/* Need to check further */
+
+/* .drop-down-wrapper::before{
+     content: "" !important;
+     width: 20px !important;
+     height: 20px !important;
+    background: url('./../../icons/hdfc/india_flag_v2.png') !important;
+    position: absolute !important;
+} */
+#dropdown-2a01ff1480-description{
+    width: max-content;
+}
+#dropdown-2a01ff1480-description p{
+    font-size: 1.1rem;
+}
+.field-country-mobile-panel .field-panel-radio-button,
+.panel-wrapper.field-source-of-panel.field-wrapper.col-4
+{
+    display: block !important;
+}
+.panel-wrapper.field-panel-radio-button.field-wrapper.col-4{
+    margin-left: 25px;
+}
+
+.form.block .date-wrapper.field-dob.field-wrapper.col-3 input{
+    width: 350px;
+    height: 50px;
+    border-radius: 0;
+    padding: 25px;
+    border-radius: 14px;
+}
+.form.block .field-label{
+    font-family: var(--form-label-color);
+    font-weight: normal;
+}
+}
+.field-income-notice-text{
+    border: 2px solid #e3901c;
+    border-radius: 14px;
+    background-color: #fdf9f6;
+
+}
+.field-income-notice-text p{
+    font-size: 15.6px !important;
+    color: orange !important;
+    margin: 0 !important;
+    padding: 4px;
+    line-height: 20px;
+}
+.section.fragment-container.columns-container .fragment-wrapper{
+    margin-bottom: 35px;
+}
+button[type="submit"]{
+    border-radius: 16px !important;
+    margin: 0;
+}
+ button[type="submit"]::after{
+   content: ">";
+   padding-left: 25px;
+}
+
+.fragment.block.form-container .form-wrapper{
+    padding-bottom: 10px;
+}
+.field-privacy-policy,
+.field-privacy-policy *
+{
+    margin: 0 !important;
+}
+.field-otp-input,
+.field-otp-input *{
+    margin: 0 !important;
+}
+.field-resend-otp-panel,
+.field-resend-otp-panel *
+{
+    margin: 0 !important;
+}
+.field-form-submit-button1771495480417 button{
+    margin-top: 25px;
 }

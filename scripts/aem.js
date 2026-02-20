@@ -617,6 +617,10 @@ function decorateBlocks(main) {
  */
 async function loadHeader(header) {
   const headerBlock = buildBlock('header', '');
+  // const res = await fetch('/nav.plain.html');
+  // if(res.ok){
+  //   document.querySelector('header').innerHTML = await res.text();
+  // }
   header.append(headerBlock);
   decorateBlock(headerBlock);
   return loadBlock(headerBlock);
