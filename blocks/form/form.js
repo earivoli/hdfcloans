@@ -508,6 +508,17 @@ function loadFormCustomStyles(formDef) {
 }
 
 export default async function decorate(block) {
+
+  document.addEventListener("change",function(e){
+    if(e.target.name==="radiobutton-51c08fa0e9_source_of_income"){
+      if(e.target.value==="0"){
+        const move = document.getElementById("text-cf63a4b0aa");
+        const element = document.querySelector('[data-id="source-of-income"]');
+        element.append(move)
+      }
+    }
+  })
+
   let container = block.querySelector('a[href]');
   let formDef;
   let pathname;
@@ -566,3 +577,4 @@ export default async function decorate(block) {
     container.replaceWith(form);
   }
 }
+

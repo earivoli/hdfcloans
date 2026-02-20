@@ -31,3 +31,30 @@
     order: unset;
   }
 }
+.section.fragment-container.columns-container div:nth-of-type(3).columns-wrapper
+ {
+  margin: 0;
+  margin-left: 60px;
+}
+.section.fragment-container.columns-container div:nth-of-type(4).columns-wrapper{
+   margin: 0;
+  margin-left: 45px;
+  max-width: 1364px;
+}
+
+.section.fragment-container.columns-container div:nth-of-type(3).columns-wrapper h6{
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.columns-wrapper .columns.block.columns-4-cols div div{
+  display: flex;
+}
+.columns-wrapper .columns.block.columns-4-cols img{
+  height: 45px;
+  width: 45px;
+}
+.columns.block.columns-4-cols .button-container a{
+  background-color: white;
+  color: blue;
+  margin: 0;
+}

@@ -1,4 +1,4 @@
-footer {
+/* footer {
   background-color: var(--light-color);
   font-size: var(--body-font-size-xs);
 }
@@ -17,4 +17,15 @@ footer .footer p {
   footer .footer > div {
     padding: 40px 32px 24px;
   }
+} */
+
+.footer-wrapper{
+  background-color: var(--hdfc-header-footer);
+  position: relative;
+}
+.footer-wrapper p{
+  padding: 5px;
+  color: var(--background-color);
+  text-align: center;
+  font-size: 0.8rem;
 }
