@@ -59,5 +59,11 @@
 >>>>>>> 3012acf (Initial commit)
       ]
     }
+  ],
+  "styles":[
+    {
+      "name":"Offers Page",
+      "class":"pl-offer-page"
+    }
   ]
 }
