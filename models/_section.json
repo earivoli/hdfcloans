@@ -33,6 +33,10 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "PL Offers Page",
+              "value": "pl-offers-page"
             }
           ]
         }
@@ -58,12 +62,6 @@
         "embed-adaptive-form"
 >>>>>>> 3012acf (Initial commit)
       ]
-    }
-  ],
-  "styles":[
-    {
-      "name":"Offers Page",
-      "class":"pl-offer-page"
     }
   ]
 }
