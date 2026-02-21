@@ -61,8 +61,12 @@ function concatWithLoanAmount(fieldName,min,max,globals){
   console.log("file",field);
 
   if(field){
-    field.min = min;
-    field.max = max;
+    globals.functions.importField(fieldName,{
+      ...field,
+      minimum : min,
+      maximum : max
+    });
+    
   }
 
 
