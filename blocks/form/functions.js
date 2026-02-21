@@ -42,6 +42,14 @@ function days(endDate, startDate) {
   return Math.floor(diffInMs / (1000 * 60 * 60 * 24));
 }
 
+/**
+ * Custom submit function
+ * @name concatWithLoanAmount
+ * @param {object} fieldName
+ * @param {number} min
+ * @param {number} max
+ * @param {scope} globals
+ */
 function concatWithLoanAmount(fieldName,min,max,globals){
 
   const form = globals.form;
