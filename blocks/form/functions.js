@@ -42,8 +42,22 @@ function days(endDate, startDate) {
   return Math.floor(diffInMs / (1000 * 60 * 60 * 24));
 }
 
-function concatWithLoanAmount(txt,amount){
-  return txt + String(amount);
+function concatWithLoanAmount(fieldName,min,max,globals){
+
+  const form = globals.form;
+
+  console.log("Form ",form)
+
+  const field = globals.functions.exportField(fieldName);
+
+  console.log("file",field);
+
+  if(field){
+    field.min = min;
+    field.max = max;
+  }
+
+
 }
 
 
