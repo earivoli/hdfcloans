@@ -132,7 +132,16 @@
         "component": "multiselect",
         "name": "style",
         "label": "Style",
-        "options": []
+        "options": [
+          {
+            "name": "Highlight1",
+            "value": "highlight1"
+          },
+          {
+            "name": "PL Offers Page",
+            "value": "pl-offers-page"
+          }
+        ]
       }
     ]
   },

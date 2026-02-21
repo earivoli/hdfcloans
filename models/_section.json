@@ -30,7 +30,14 @@
           "name": "style",
           "label": "Style",
           "options": [
-           
+            {
+              "name": "Highlight1",
+              "value": "highlight1"
+            },
+            {
+              "name": "PL Offers Page",
+              "value": "pl-offers-page"
+            }
           ]
         }
       ]
