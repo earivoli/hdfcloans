@@ -44,7 +44,6 @@ function days(endDate, startDate) {
 
 function setRangeProperties(fieldName,min,max){
   const ele = document.querySelector(`[name="${loan_amount_range_input}"']`);
-
   if(ele){
     ele.min = min;
     ele.max = max;
@@ -52,5 +51,19 @@ function setRangeProperties(fieldName,min,max){
   }
 }
 
+function updateLoanSlider(min,max){
+  guideBridge.connect(function(){
+
+    const slider = guideBridge.resolveNode("loan_amount_range");
+
+    slider.minimum = Number(min);
+    slider.maximum = Number(max);
+    slider.value = Number(max);
+
+    slider.validate();
+    
+  });
+}
+
 // eslint-disable-next-line import/prefer-default-export
-export { getFullName, days, submitFormArrayToString,setRangeProperties };
+export { getFullName, days, submitFormArrayToString,setRangeProperties,updateLoanSlider};
