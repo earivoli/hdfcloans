@@ -42,5 +42,15 @@ function days(endDate, startDate) {
   return Math.floor(diffInMs / (1000 * 60 * 60 * 24));
 }
 
+function setRangeProperties(fieldName,min,max){
+  const ele = document.querySelector(`[name="${loan_amount_range_input}"']`);
+
+  if(ele){
+    ele.min = min;
+    ele.max = max;
+    ele.dispatchEvent(new Event('change'));
+  }
+}
+
 // eslint-disable-next-line import/prefer-default-export
-export { getFullName, days, submitFormArrayToString };
+export { getFullName, days, submitFormArrayToString,setRangeProperties };
