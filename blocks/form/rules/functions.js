@@ -291,14 +291,15 @@ function saveToSession(fieldName,value){
   console.log(sessionStorage.getItem("value"))
 }
 
-
-
+/**
+ * Custom submit function
+ * @name fetchFromSession
+ */
 function fetchFromSession(){
  const ele = sessionStorage.getItem("sample");
  console.log(ele);
  return ele;
 }
-
 
 
 export {
