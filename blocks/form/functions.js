@@ -42,7 +42,27 @@ function days(endDate, startDate) {
   return Math.floor(diffInMs / (1000 * 60 * 60 * 24));
 }
 
+/**
+ * Custom submit function
+ * @name rangeAmountSet
+ * @param {object} fieldName
+ * @param {number} text
+ * @param {number} loan
+ * @param {scope} globals
+ */
+
+function rangeAmountSet(fieldName,min,max,globals){
+
+  console.log("Field Name:",fieldName)
+  console.log("Min Name:",min)
+  console.log("Max Name:",max)
+  console.log("Globals Name:",globals)
+
+  fieldName.min = min;
+  fieldName.max = max;
+
+}
 
 
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet};
