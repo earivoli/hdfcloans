@@ -5,6 +5,7 @@
   "includes": [
     "/content/hdfc",
     "/content/dam/",
-    "/content/forms"
+    "/content/forms",
+    "/content/dam/formsanddocuments"
   ]
 }
