@@ -244,6 +244,18 @@ function dateToDaysSinceEpoch(date) {
   return Math.floor(dateObj.getTime() / (1000 * 60 * 60 * 24));
 }
 
+/**
+ * Custom submit function
+ * @name concatWithLoanAmount
+ * @param {string} text
+ * @param {number} loan
+ */
+function concatWithLoanAmount(text,loan){
+  console.log(text,loan);
+  return text + loan;
+}
+
+
 export {
   externalize,
   validateURL,
@@ -254,4 +266,5 @@ export {
   defaultSubmitErrorHandler,
   fetchCaptchaToken,
   dateToDaysSinceEpoch,
+  concatWithLoanAmount
 };

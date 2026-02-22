@@ -42,17 +42,7 @@ function days(endDate, startDate) {
   return Math.floor(diffInMs / (1000 * 60 * 60 * 24));
 }
 
-/**
- * Custom submit function
- * @name concatWithLoanAmount
- * @param {string} text
- * @param {number} loan
- */
-function concatWithLoanAmount(text,loan){
-  console.log(text,loan);
-  return text + loan;
-}
 
 
 // eslint-disable-next-line import/prefer-default-export
-export { getFullName, days, submitFormArrayToString,concatWithLoanAmount};
+export default{ getFullName, days, submitFormArrayToString};
