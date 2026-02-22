@@ -53,7 +53,7 @@ function days(endDate, startDate) {
 
 function rangeAmountSet(fieldName,min,max,globals){
 
-  console.log("Field Name:",fieldName)
+  console.log("Field Name:",fieldName.$data.$name)
   console.log("Min Name:",min)
   console.log("Max Name:",max)
   console.log("Globals Name:",globals)
@@ -71,8 +71,15 @@ function rangeAmountSet(fieldName,min,max,globals){
  */
 function saveToSession(fieldName,value){
   sessionStorage.setItem(fieldName,value)
+  console.log(fieldName)
+  sessionStorage.setItem("E",123)
   console.log("1:",sessionStorage.getItem(fieldName));
+}
+function calculateEMI(p,n){
+  const r = n / (12 * 100);
+  console.log(r)
+  return (p*r * Math.pow(1+r))/(Math.pow(1+r,n)-1).toFixed(0);
 }
 
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI};
