@@ -288,7 +288,7 @@ function saveToSession(fieldName,value){
   console.log("Starting...")
   sessionStorage.setItem(fieldName._data.$_name,value)
 }
-function calculateEMI(p,n){
+function calculateEMI(principal,rateofinterst,numberofmonths){
   console.log("P",principal);
   console.log("N",numberofmonths);
   console.log("R",rateofinterst)
