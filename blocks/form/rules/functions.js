@@ -291,6 +291,13 @@ function saveToSession(fieldName,value){
   console.log(sessionStorage.getItem("value"))
 }
 
+function fetchFromSession(){
+ const ele = sessionStorage.getItem("sample");
+ console.log(ele);
+ return ele;
+}
+
+
 
 function fetchFromSession(){
  const ele = sessionStorage.getItem("sample");

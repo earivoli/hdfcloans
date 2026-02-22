@@ -77,6 +77,12 @@ function saveToSession(fieldName,value){
   console.log(sessionStorage.getItem("value"))
 }
 
+function fetchFromSession(){
+ const ele = sessionStorage.getItem("sample");
+ console.log(ele);
+ return ele;
+}
+
 
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,fetchFromSession};
