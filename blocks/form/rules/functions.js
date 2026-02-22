@@ -294,9 +294,9 @@ function calculateEMI(principal,rateofinterst,numberofmonths){
   console.log("R",rateofinterst)
   const r = rateofinterst / (12 * 100);
   console.log(r)
-  const EMI = (principal * r * Math.pow(1 + r ),numberofmonths)/(Math.pow(1+r,numberofmonths)-1).toFixed(0);
+  const EMI = (principal * r * Math.pow(1 + r ),numberofmonths)/(Math.pow(1+r,numberofmonths)-1);
   console.log("EMI Amount is ", EMI)
-  return EMI;
+  return EMI.toFixed(0);
 }
 
 export {
