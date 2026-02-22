@@ -287,5 +287,6 @@ export {
   defaultSubmitErrorHandler,
   fetchCaptchaToken,
   dateToDaysSinceEpoch,
-  concatWithLoanAmount
+  concatWithLoanAmount,
+  rangeAmountSet
 };
