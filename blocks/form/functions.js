@@ -78,7 +78,9 @@ function saveToSession(fieldName,value){
 function calculateEMI(p,n){
   const r = n / (12 * 100);
   console.log(r)
-  return (p*r * Math.pow(1+r))/(Math.pow(1+r,n)-1).toFixed(0);
+  const EMI = (p*r * Math.pow(1+r),n)/(Math.pow(1+r,n)-1).toFixed(0);
+  console.log("EMI Amount is ", EMI)
+  return EMI;
 }
 
 // eslint-disable-next-line import/prefer-default-export
