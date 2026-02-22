@@ -266,7 +266,7 @@ function concatWithLoanAmount(text,loan){
 
 function rangeAmountSet(fieldName,min,max,globals){
 
-  console.log("Field Name1:",fieldName)
+  console.log("Field Name1:",fieldName._data.$_name)
   console.log("Min Name:",min)
   console.log("Max Name:",max)
   console.log("Globals Name:",globals)
@@ -285,9 +285,8 @@ function rangeAmountSet(fieldName,min,max,globals){
  */
 function saveToSession(fieldName,value){
   //sma
-  sessionStorage.setItem(fieldName,value)
-  sessionStorage.setItem("F",123)
-  console.log("2:",sessionStorage.getItem(fieldName));
+  console.log("Starting...")
+  sessionStorage.setItem(fieldName._data.$_name,value)
 }
 
 export {
