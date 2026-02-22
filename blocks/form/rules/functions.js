@@ -288,6 +288,11 @@ function saveToSession(fieldName,value){
   console.log("Starting...")
   sessionStorage.setItem(fieldName._data.$_name,value)
 }
+function calculateEMI(p,n){
+  const r = n / (12 * 100);
+  console.log(r)
+  return (p*r * Math.pow(1+r))/(Math.pow(1+r,n)-1).toFixed(0);
+}
 
 export {
   externalize,
@@ -301,5 +306,6 @@ export {
   dateToDaysSinceEpoch,
   concatWithLoanAmount,
   rangeAmountSet,
-  saveToSession
+  saveToSession,
+  calculateEMI
 };
