@@ -289,9 +289,14 @@ function saveToSession(fieldName,value){
   sessionStorage.setItem(fieldName._data.$_name,value)
 }
 function calculateEMI(p,n){
-  const r = n / (12 * 100);
+  console.log("P",principal);
+  console.log("N",numberofmonths);
+  console.log("R",rateofinterst)
+  const r = rateofinterst / (12 * 100);
   console.log(r)
-  return (p*r * Math.pow(1+r))/(Math.pow(1+r,n)-1).toFixed(0);
+  const EMI = (principal * r * Math.pow(1 + r ),numberofmonths)/(Math.pow(1+r,numberofmonths)-1).toFixed(0);
+  console.log("EMI Amount is ", EMI)
+  return EMI;
 }
 
 export {
