@@ -284,23 +284,9 @@ function rangeAmountSet(fieldName,min,max,globals){
  * @param {scope} globals
  */
 function saveToSession(fieldName,value){
-  sessionStorage.setItem("Sample","Ezhiloli");
-  sessionStorage.setItem("value",value)
-
-  console.log(sessionStorage.getItem("Sample"))
-  console.log(sessionStorage.getItem("value"))
+  //sma
+  sessionStorage.setItem(fieldName,value)
 }
-
-/**
- * Custom submit function
- * @name fetchFromSession
- */
-function fetchFromSession(){
- const ele = sessionStorage.getItem("sample");
- console.log(ele);
- return ele;
-}
-
 
 export {
   externalize,
@@ -314,6 +300,5 @@ export {
   dateToDaysSinceEpoch,
   concatWithLoanAmount,
   rangeAmountSet,
-  saveToSession,
-  fetchFromSession
+  saveToSession
 };
