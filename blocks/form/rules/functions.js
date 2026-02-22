@@ -255,6 +255,27 @@ function concatWithLoanAmount(text,loan){
   return text + loan;
 }
 
+/**
+ * Custom submit function
+ * @name rangeAmountSet
+ * @param {object} fieldName
+ * @param {number} text
+ * @param {number} loan
+ * @param {scope} globals
+ */
+
+function rangeAmountSet(fieldName,min,max,globals){
+
+  console.log("Field Name:",fieldName)
+  console.log("Min Name:",min)
+  console.log("Max Name:",max)
+  console.log("Globals Name:",globals)
+
+  fieldName.min = min;
+  fieldName.max = max;
+
+}
+
 
 export {
   externalize,
