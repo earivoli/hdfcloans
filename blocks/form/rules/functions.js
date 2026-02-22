@@ -266,7 +266,7 @@ function concatWithLoanAmount(text,loan){
 
 function rangeAmountSet(fieldName,min,max,globals){
 
-  console.log("Field Name:",fieldName)
+  console.log("Field Name1:",fieldName)
   console.log("Min Name:",min)
   console.log("Max Name:",max)
   console.log("Globals Name:",globals)
@@ -276,7 +276,20 @@ function rangeAmountSet(fieldName,min,max,globals){
 
 }
 
+/**
+ * Custom submit function
+ * @name saveToSession
+ * @param {object} fieldName
+ * @param {number} value
+ * @param {scope} globals
+ */
+function saveToSession(fieldName,value){
+  sessionStorage.setItem("Sample","Ezhiloli");
+  sessionStorage.setItem("value",value)
 
+  console.log(sessionStorage.getItem("Sample"))
+  console.log(sessionStorage.getItem("value"))
+}
 export {
   externalize,
   validateURL,
@@ -288,5 +301,6 @@ export {
   fetchCaptchaToken,
   dateToDaysSinceEpoch,
   concatWithLoanAmount,
-  rangeAmountSet
+  rangeAmountSet,
+  saveToSession
 };
