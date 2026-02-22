@@ -62,7 +62,21 @@ function rangeAmountSet(fieldName,min,max,globals){
   fieldName.max = max;
 
 }
+/**
+ * Custom submit function
+ * @name saveToSession
+ * @param {object} fieldName
+ * @param {number} value
+ * @param {scope} globals
+ */
+function saveToSession(fieldName,value){
+  sessionStorage.setItem("Sample","Ezhiloli");
+  sessionStorage.setItem("value",value)
+
+  console.log(sessionStorage.getItem("Sample"))
+  console.log(sessionStorage.getItem("value"))
+}
 
 
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession};
