@@ -45,31 +45,12 @@ function days(endDate, startDate) {
 /**
  * Custom submit function
  * @name concatWithLoanAmount
- * @param {object} fieldName
- * @param {number} min
- * @param {number} max
- * @param {scope} globals
+ * @param {string} text
+ * @param {number} loan
  */
-function concatWithLoanAmount(fieldName,min,max,globals){
-
-  const form = globals.form;
-
-  console.log("Form ",form)
-
-  const field = globals.functions.exportField(fieldName);
-
-  console.log("file",field);
-
-  if(field){
-    globals.functions.importField(fieldName,{
-      ...field,
-      minimum : min,
-      maximum : max
-    });
-    
-  }
-
-
+export function concatWithLoanAmount(text,loan){
+  console.log(text,loan);
+  return text + loan;
 }
 
 
