@@ -48,7 +48,7 @@ function days(endDate, startDate) {
  * @param {string} text
  * @param {number} loan
  */
-export function concatWithLoanAmount(text,loan){
+function concatWithLoanAmount(text,loan){
   console.log(text,loan);
   return text + loan;
 }
