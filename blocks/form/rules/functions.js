@@ -290,6 +290,16 @@ function saveToSession(fieldName,value){
   console.log(sessionStorage.getItem("Sample"))
   console.log(sessionStorage.getItem("value"))
 }
+
+
+function fetchFromSession(){
+ const ele = sessionStorage.getItem("sample");
+ console.log(ele);
+ return ele;
+}
+
+
+
 export {
   externalize,
   validateURL,
@@ -302,5 +312,6 @@ export {
   dateToDaysSinceEpoch,
   concatWithLoanAmount,
   rangeAmountSet,
-  saveToSession
+  saveToSession,
+  fetchFromSession
 };
