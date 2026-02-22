@@ -75,10 +75,10 @@ function saveToSession(fieldName,value){
   sessionStorage.setItem("E",123)
   console.log("1:",sessionStorage.getItem(fieldName));
 }
-function calculateEMI(p,n){
-  const r = n / (12 * 100);
+function calculateEMI(principal,rateofinterst,numberofmonths){
+  const r = rateofinterst / (12 * 100);
   console.log(r)
-  const EMI = (p*r * Math.pow(1+r),n)/(Math.pow(1+r,n)-1).toFixed(0);
+  const EMI = (principal * r * Math.pow(1 + r ),numberofmonths)/(Math.pow(1+r,numberofmonths)-1).toFixed(0);
   console.log("EMI Amount is ", EMI)
   return EMI;
 }
