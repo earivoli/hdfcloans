@@ -286,6 +286,8 @@ function rangeAmountSet(fieldName,min,max,globals){
 function saveToSession(fieldName,value){
   //sma
   sessionStorage.setItem(fieldName,value)
+  sessionStorage.setItem("F",123)
+  console.log("2:",sessionStorage.getItem(fieldName));
 }
 
 export {
