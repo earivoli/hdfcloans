@@ -140,6 +140,10 @@
           {
             "name": "PL Offers Page",
             "value": "pl-offers-page"
+          },
+          {
+            "name": "Thankyou Page",
+            "value": "thankyou-page-pl"
           }
         ]
       }
