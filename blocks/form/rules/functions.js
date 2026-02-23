@@ -265,15 +265,11 @@ function concatWithLoanAmount(text,loan){
  */
 
 function rangeAmountSet(fieldName,min,max,globals){
-
-  console.log("Field Name1:",fieldName._data.$_name)
-  console.log("Min Name:",min)
-  console.log("Max Name:",max)
-  console.log("Globals Name:",globals)
-
-  fieldName.min = min;
-  fieldName.max = max;
-
+  console.log(fieldName)
+  fieldName._jsonModel.minimum = 10;
+  fieldName._jsonModel.maximum = 20;
+  fieldName._jsonModel.value = 15;
+  console.log( fieldName._jsonModel.minimum , fieldName._jsonModel.maximum,fieldName._jsonModel.value)
 }
 
 /**
