@@ -110,6 +110,17 @@ function isValidMobileNumber(mobile){
   }
 
 }
+function validatePANcard(pan){
+  if(pan.length !=0 || !pan){
+    return "length"
+  }
+  if(pan[3]!=='P'){
+    return "not personal"
+  }
+  if(pan[3]==='P'){
+    return "valid"
+  }
+}
 
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,isValidMobileNumber};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,isValidMobileNumber,validatePANcard};
