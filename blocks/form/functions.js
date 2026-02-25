@@ -84,8 +84,20 @@ function calculateEMI(principal,rateofinterst,numberofmonths){
   const EMI = (principal * r * Math.pow(1 + r ),numberofmonths)/(Math.pow(1+r,numberofmonths)-1).toFixed(0);
   console.log("EMI Amount is ", EMI)
   return EMI;
+
+}
+function returnFullCustName(fName,Lname){
+  const fullName = String(fName)+ " " +String(Lname);
+  console.log("Full Name is::-",fullName)
+  return fullName;
+}
+
+function returnFullAddress(address1,address2,address3,state,city,zip){
+  const fullAddress = String(address1) + " " + String(address2) + " " + String(address3) + " " + String + (state) + " " + String(zip);
+  console.log("Full Address is_::-",fullAddress);
+  return fullAddress;
 }
 
 
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress};
