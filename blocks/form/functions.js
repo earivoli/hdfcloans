@@ -51,17 +51,17 @@ function days(endDate, startDate) {
  * @param {scope} globals
  */
 
-function rangeAmountSet(fieldName,min,max,globals){
+// function rangeAmountSet(fieldName,min,max,globals){
 
-  console.log("Field Name:",fieldName.$data.$name)
-  console.log("Min Name:",min)
-  console.log("Max Name:",max)
-  console.log("Globals Name:",globals)
+//   console.log("Field Name:",fieldName.$data.$name)
+//   console.log("Min Name:",min)
+//   console.log("Max Name:",max)
+//   console.log("Globals Name:",globals)
 
-  fieldName.min = min;
-  fieldName.max = max;
+//   fieldName.min = min;
+//   fieldName.max = max;
 
-}
+// }
 /**
  * Custom submit function
  * @name saveToSession
@@ -86,5 +86,11 @@ function calculateEMI(principal,rateofinterst,numberofmonths){
   return EMI;
 }
 
+function returnFullCustName(fName,Lname){
+  const fullName = String(fName)+String(Lname);
+  console.log("Full Name is:",fullName)
+  return fullName;
+}
+
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName};
