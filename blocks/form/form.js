@@ -493,7 +493,6 @@ function addRequestContextToForm(formDef) {
     }
   }
 }
-
 function loadFormCustomStyles(formDef) {
   const { style } = formDef?.properties || {};
   if (style) {
@@ -507,17 +506,136 @@ function loadFormCustomStyles(formDef) {
   }
 }
 
-export default async function decorate(block) {
 
+ function waitForTheFormLoads(block){
+
+  const observer = new MutationObserver((mutations,obs)=>{
+    if(block.dataset.blockStatus === 'loaded'){
+    obs.disconnect();
+    const form = block.querySelector('form');
+
+    //offers-page.js
+      // 1.Case Icon
+    const cashIcon = form.querySelector('#image-138a1ea507 img');
+    console.log(cashIcon)
+    if(cashIcon){
+      cashIcon.remove()
+      const newImage = document.createElement('img');
+      newImage.src = '../../icons/hdfc/cash_icon.png'
+      form.querySelector('#image-138a1ea507').appendChild(newImage)
+    }
+
+    const OTPClick = form.querySelector('.field-panel-12477171871771494397363 .field-form-submit.field-wrapper button');
+    if(OTPClick){
+    OTPClick.addEventListener('Click',function(){
+    const timeId = form.querySelector('#text-d53735b422 p strong');
+    if(timeId){
+    let timeInsecond = 30;
+    const countDown = setInterval(()=>{
+      --timeInsecond;
+      if(timeInsecond==0){
+        clearInterval(countDown);
+        const resendOTP = document.createElement('a');
+       resendOTP.href="/";
+      resendOTP.innerText ="Resend OTP"
+      // form.querySelector('#text-d53735b422 p').remove();
+      form.querySelector('#text-d53735b422').appendChild(resendOTP)
+      }
+      timeId.innerText = timeInsecond + " seconds";
+    },1000)
+   
+    }
+  });
+}
+
+      //2.Range slider
+    const amountRangeSlider = form.querySelector("#numberinput-8e59a04b18");
+    const tenureRangeSlider = form.querySelector("#numberinput-93379f3203");
+      let offerAmount = 1500000;
+      if(sessionStorage.getItem("offerAmount")){
+          offerAmount = sessionStorage.getItem("offerAmount")
+      }
+      let tenure = 84;
+      if(sessionStorage.getItem("tenure")){
+          offerAmount = sessionStorage.getItem("tenure")
+      }
+      sliderToupdate(amountRangeSlider,50000,offerAmount)
+     sliderToupdate(tenureRangeSlider,12,tenure)
+
+      if(amountRangeSlider){
+      amountRangeSlider.addEventListener("input",function(){
+          const amountInput =  form.querySelector('#textinput-3a5e56fe44');
+          if(amountInput){
+            const amountTodestination = form.querySelector('.field-loan-amount-range .range-bubble')
+            amountInput.value = amountTodestination.innerText;
+
+            amountInput.dispatchEvent(new Event("input",{bubbles:true}))
+            amountInput.dispatchEvent(new Event("change",{bubbles:true}))
+          }
+      })
+    }
+    if(tenureRangeSlider){
+      tenureRangeSlider.addEventListener("input",function(){
+          const tenureInput =  form.querySelector('#textinput-d4e9fd0571');
+          const hiddenInput = form.querySelector('#textinput-d2aa2a6791')
+          if(tenureInput && hiddenInput){
+            const amountTodestination = form.querySelector('.field-loan-tenure-range .range-bubble');
+            console.log(amountTodestination)
+            tenureInput.value = amountTodestination.innerText + " Months";
+            hiddenInput.value = amountTodestination.innerText;
+
+            hiddenInput.dispatchEvent(new Event("input",{bubbles:true}))
+            hiddenInput.dispatchEvent(new Event("change",{bubbles:true}))
+          }
+      })
+    }
+    
+   
+    }   
+  });
+
+  observer.observe(block,{
+    attributes:true,
+    attributeFilter:['data-block-status'],
+    childList:true,
+    subtree:true
+  })
+}
+
+function sliderToupdate(rangeSlider,min,max){
+  if(rangeSlider){
+    console.log("True")
+        rangeSlider.min = min;
+        rangeSlider.max = max;
+        rangeSlider.val = max;
+        const wrapper = rangeSlider.parentElement;
+        console.log(wrapper)
+        const rangeMin = wrapper.querySelector(".range-min");
+        const rangeMax = wrapper.querySelector(".range-max");
+        const rangeBubble = wrapper.querySelector(".range-bubble");
+        rangeMin.innerText = min;
+        rangeMax.innerText = max;
+        rangeBubble.innerText=max;
+        rangeSlider.dispatchEvent(new Event("input",{bubbles:true}))
+        rangeSlider.dispatchEvent(new Event("change",{bubbles:true}))
+      }
+}
+
+
+export default async function decorate(block) {
   document.addEventListener("change",function(e){
-    if(e.target.name==="radiobutton-51c08fa0e9_source_of_income"){
-      if(e.target.value==="0"){
-        const move = document.getElementById("text-cf63a4b0aa");
+    if(e.target.name==="radiobutton-474f7b5896_source_of_income"){
+      if(e.target.value==="salaried"){
+        console.log('True')
+        const move = document.getElementById("text-6aa1ad05f3");
         const element = document.querySelector('[data-id="source-of-income"]');
         element.append(move)
       }
     }
   })
+
+  waitForTheFormLoads(block);
+
 
   let container = block.querySelector('a[href]');
   let formDef;

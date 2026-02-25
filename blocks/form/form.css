@@ -813,7 +813,7 @@ main .form.block form{
 }
 
 /* Global Margin Set */
-.dropdown-2a01ff1480-description,
+.dropdown-2a01ff1480-description,.field-countrycode
 .section.fragment-container .fragment-wrapper,
 .section.fragment-container .field-country-mobile-panel .field-mobilenumber,
 .section.fragment-container .field-country-mobile-panel .field-mobilenumber input[type="number"]
@@ -821,14 +821,19 @@ main .form.block form{
 {
     margin: 0;
 }
-.field-countrycode{
-    margin:0 !important;
-}
+
 
 .fragment-container .fragment-wrapper .fragment.block.form-container{
     border-top-right-radius: 16px;
     border-top-left-radius: 16px;
     margin-top: 16px;
+}
+.field-countrycode #dropdown-b6e496eb02{
+    width: auto;
+    height: 53px;
+    margin-top: 5px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
 }
 .section.fragment-container.columns-container .fragment-container .fragment-wrapper .fragment.block.form-container{
     position: relative;
@@ -851,9 +856,7 @@ main .form.block form{
 }
 .section.fragment-container .field-country-mobile-panel .field-mobilenumber input[type="text"]
 {
-    width: 280px;
-    position: relative;
-    left: 30%;
+    width: 305px;
     border-left: none;
     height: 50px;
     border-radius: 0;
@@ -861,10 +864,22 @@ main .form.block form{
     border-top-right-radius: 14px;
     border-bottom-right-radius: 14px;
     margin-right: 5px;
+    margin-left: 40px;
     padding-right: 10px;
     letter-spacing: 10px;
-    font-size: 20px !important;
+    margin-top: 10px;
 }
+
+.pl-offers-page .form form .text-wrapper.field-mobilenumber.field-wrapper input{
+        font-size: 20px;
+}
+/* Minimum Number Erroe Message*/
+#telephoneinput-3b60292ca3-description{
+    margin-top: -17px;
+    width: max-content;
+    margin-left: 50px;
+}
+
 .field-otp-input input[type="text"]
 {
     height: 60px;
@@ -905,7 +920,7 @@ main .form.block form{
     background: url('./../../icons/hdfc/india_flag_v2.png') !important;
     position: absolute !important;
 } */
-#dropdown-2a01ff1480-description{
+#dropdown-b6e496eb02-description p{
     width: max-content;
 }
 #dropdown-2a01ff1480-description p{
@@ -920,13 +935,19 @@ main .form.block form{
     margin-left: 25px;
 }
 
-.form.block .date-wrapper.field-dob.field-wrapper.col-3 input{
+.form.block .date-wrapper.field-dob.field-wrapper.col-3 input,
+.form.block .field-pan-card input
+
+{
     width: 350px;
     height: 50px;
     border-radius: 0;
     padding: 25px;
     border-radius: 14px;
 }
+
+
+
 .form.block .field-label{
     font-family: var(--form-label-color);
     font-weight: normal;
@@ -976,4 +997,27 @@ button[type="submit"]{
 }
 .field-form-submit-button1771495480417 button{
     margin-top: 25px;
+}
+.range-bubble
+{
+    display: none !important;
+}
+
+.field-loan-amount-range .range-widget-wrapper,
+.field-loan-tenure-range .range-widget-wrapper
+{
+    padding-top: 36px;
+}
+.field-emi-and-loan-tenure-panel label{
+    color: black !important;
+    font-weight: bolder !important;
+}
+#textinput-b5c2e5c1b9{
+    letter-spacing: 5px;
+}
+.field-tenure-hidden-input-1 {
+    display: none;
+}
+.field-rate-of-interst-input-1{
+    display: none;
 }
