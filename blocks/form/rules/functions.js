@@ -315,6 +315,17 @@ function isValidMobileNumber(mobile){
   }
 
 }
+function validatePANcard(pan){
+  if(pan.length !=0 || !pan){
+    return "length"
+  }
+  if(pan[3]!=='P'){
+    return "not personal"
+  }
+  if(pan[3]==='P'){
+    return "valid"
+  }
+}
 
 export {
   externalize,
