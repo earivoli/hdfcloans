@@ -302,16 +302,12 @@ function returnFullAddress(address1,address2,address3,state,city,zip){
 }
 
 function isValidMobileNumber(mobile){
-  console.log("Type",typeof(mobile))
-  console.log("Mobile",mobile.value)
-    console.log(mobile)
-    console.log(mobile._data.$_value);
-
-
-  if(!mobile){
+  console.log(typeof(mobile._data.$_value));
+  const data = mobile._data.$_value
+  if(!data){
     return false;
   }
-  if(mobile.length==10){
+  if(data.length==10){
     console.log("True..")
     return true;
   }else{
