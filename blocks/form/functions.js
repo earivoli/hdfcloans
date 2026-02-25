@@ -93,7 +93,7 @@ function returnFullCustName(fName,Lname){
 }
 
 function returnFullAddress(address1,address2,address3,state,city,zip){
-  const fullAddress = String(address1) + " " + String(address2) + " " + String(address3) + " " + String + (state) + " " + String(zip);
+  const fullAddress = String(address1) + " " + String(address2) + " " + String(address3) + " " + String(state) + " " + String(zip);
   console.log("Full Address is_::-",fullAddress);
   return fullAddress;
 }
