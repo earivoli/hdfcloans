@@ -101,7 +101,8 @@ function returnFullAddress(address1,address2,address3,state,city,zip){
 function isValidMobileNumber(mobile){
     console.log("Type",typeof(mobile))
   console.log("Mobile",mobile.value)
-  console.log(mobile)
+  console.log("A",mobile._data.$_value);
+
   if(!mobile){
     return false;
   }
