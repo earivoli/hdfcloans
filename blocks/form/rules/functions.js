@@ -305,6 +305,7 @@ function isValidMobileNumber(mobile){
   console.log("Type",typeof(mobile))
   console.log("Mobile",mobile.value)
     console.log(mobile)
+    console.log(mobile._data.$_value);
 
 
   if(!mobile){
