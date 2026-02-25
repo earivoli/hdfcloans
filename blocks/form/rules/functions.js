@@ -304,13 +304,13 @@ function returnFullAddress(address1,address2,address3,state,city,zip){
 function isValidMobileNumber(mobile){
 
   if(!mobile){
-    return String(false);
+    return false;
   }
   if(mobile.length==10){
     console.log("True..")
-    return String(true);
+    return true;
   }else{
-    return String(false);
+    return false;
   }
 
 }
