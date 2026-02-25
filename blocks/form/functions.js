@@ -98,6 +98,17 @@ function returnFullAddress(address1,address2,address3,state,city,zip){
   return fullAddress;
 }
 
+function isValidMobileNumber(mobile){
+  if(!mobile){
+    return false;
+  }
+  if(mobile.length==10){
+    return true;
+  }else{
+    return false;
+  }
+
+}
 
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,isValidMobileNumber};
