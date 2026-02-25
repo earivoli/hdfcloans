@@ -290,7 +290,7 @@ function calculateEMI(principal,rateofinterst,numberofmonths){
 }
 
 function returnFullCustName(fName,Lname){
-  const fullName = String(fName)+String(Lname);
+  const fullName = String(fName)+ " " +String(Lname);
   console.log("Full Name is",fullName)
   return fullName;
 }
