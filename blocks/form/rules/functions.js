@@ -302,7 +302,6 @@ function returnFullAddress(address1,address2,address3,state,city,zip){
 }
 
 function isValidMobileNumber(mobile){
-    console.log("Mobile",mobile.length)
 
   if(!mobile){
     return String(false);
@@ -365,7 +364,15 @@ function validateDOB(dob){
 
 }
 
-
+function maskMobileNumber(mobileNumber) {
+  console.log("Value",mobileNumber)
+  if (!mobileNumber) {
+    return '';
+  }
+  const value = mobileNumber.toString();
+  // Mask first 5 digits and keep the rest
+  return ` ${'*'.repeat(5)}${value.substring(5)}`;
+}
 export {
   externalize,
   validateURL,
@@ -383,5 +390,6 @@ export {
   returnFullAddress,
   isValidMobileNumber,
   validatePANcard,
-  validateDOB
+  validateDOB,
+  maskMobileNumber
 };

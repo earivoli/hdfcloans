@@ -122,43 +122,6 @@ function validatePANcard(pan){
   }
 }
 
-function validateDOB(dob){
-
-  if(!dob){
-    return String(false);
-  }
-
-  const parts = dob.split("-");
-  if(parts.length!=3){
-    return String(false);
-  }
-
-  const day = parseInt(parts[0],10);
-
-  const Months = parseInt(parts[1],10);
-
-  const year = parseInt(parts[2],10);
-
-  const datepicked = new Date(year,Months,day);
-  const today = new Date();
-
-  if(datepicked>today){
-    return "feature date";
-  }
-
-  let age = today.getFullYear()-datepicked.getFullYear();
-
-  const m = today.getMonth()-datepicked.getMonth();
-
-  if(m<0 || (m==0 && today.getDate()<datepicked.getDate())){
-    age--;
-  }
-
-  if(age<18){
-    return "minor"
-  }
-
-}
 
 
 /**
@@ -167,6 +130,7 @@ function validateDOB(dob){
 * @returns {string} returns the mobile number with first 5 digits masked
 */
 function maskMobileNumber(mobileNumber) {
+  console.log("Value",mobileNumber)
   if (!mobileNumber) {
     return '';
   }
