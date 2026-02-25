@@ -301,6 +301,18 @@ function returnFullAddress(address1,address2,address3,state,city,zip){
   return fullAddress;
 }
 
+function isValidMobileNumber(mobile){
+  if(!mobile){
+    return false;
+  }
+  if(mobile.length==10){
+    return true;
+  }else{
+    return false;
+  }
+
+}
+
 export {
   externalize,
   validateURL,
@@ -315,5 +327,6 @@ export {
   saveToSession,
   calculateEMI,
   returnFullCustName,
-  returnFullAddress
+  returnFullAddress,
+  isValidMobileNumber
 };
