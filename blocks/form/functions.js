@@ -86,11 +86,6 @@ function calculateEMI(principal,rateofinterst,numberofmonths){
   return EMI;
 }
 
-function returnFullCustName(fName,Lname){
-  const fullName = String(fName)+String(Lname);
-  console.log("Full Name is:",fullName)
-  return fullName;
-}
 
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI};
