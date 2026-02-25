@@ -264,20 +264,7 @@ function concatWithLoanAmount(text,loan){
  * @param {scope} globals
  */
 
-function rangeAmountSet(fieldName,min,max,globals){
 
-  console.log("Field Model",fieldName)
-  console.log("Min",min)
-  console.log("Field Max",max)
-
-   fieldName._jsonModel.minimum = min;
-  fieldName._jsonModel.maximum = max;
-
-  const t = fieldName._ruleNodeReference;
-
-  console.log("PM",Object.getOwnPropertyNames(Object.getPrototypeOf(t._propertiesManager)))
-
-}
 
 /**
  * Custom submit function
@@ -302,6 +289,12 @@ function calculateEMI(principal,rateofinterst,numberofmonths){
   return EMI.toFixed(0);
 }
 
+function returnFullCustName(fName,Lname){
+  const fullName = String(fName)+String(Lname);
+  console.log("Full Name is",fullName)
+  return fullName;
+}
+
 export {
   externalize,
   validateURL,
@@ -313,7 +306,7 @@ export {
   fetchCaptchaToken,
   dateToDaysSinceEpoch,
   concatWithLoanAmount,
-  rangeAmountSet,
   saveToSession,
-  calculateEMI
+  calculateEMI,
+  returnFullCustName
 };
