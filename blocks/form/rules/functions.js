@@ -302,13 +302,16 @@ function returnFullAddress(address1,address2,address3,state,city,zip){
 }
 
 function isValidMobileNumber(mobile){
+    console.log("Mobile",mobile.length)
+
   if(!mobile){
-    return false;
+    return String(false);
   }
   if(mobile.length==10){
-    return true;
+    console.log("True..")
+    return String(true);
   }else{
-    return false;
+    return String(false);
   }
 
 }
