@@ -144,6 +144,10 @@
           {
             "name": "Thankyou Page",
             "value": "thankyou-page-pl"
+          },
+          {
+            "name": "Review Details Page",
+            "value": "review-details-page"
           }
         ]
       }
