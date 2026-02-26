@@ -70,6 +70,7 @@ function days(endDate, startDate) {
  * @param {scope} globals
  */
 function saveToSession(fieldName,value){
+  sessionStorage.clear();
   sessionStorage.setItem(fieldName,value)
   console.log(fieldName)
   sessionStorage.setItem("E",123)
