@@ -173,7 +173,7 @@ function rangeAmountSet(fieldName,min,max,globals){
  */
 function setFormDatatoSession(fieldName){
   //sma
- console.log(fieldName);
+ console.log("field::-",fieldName);
 }
 
 
@@ -192,5 +192,11 @@ function maskMobileNumber(mobileNumber) {
   // Mask first 5 digits and keep the rest
   return ` ${'*'.repeat(5)}${value.substring(5)}`;
 }
+
+function combineMobileWithCountryCode(code,mobile){
+  console.log("country + mobile",code,mobile)
+}
+
+
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,isValidMobileNumber,validatePANcard,validateDOB,maskMobileNumber,rangeAmountSet,setFormDatatoSession};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,isValidMobileNumber,validatePANcard,validateDOB,maskMobileNumber,rangeAmountSet,setFormDatatoSession,combineMobileWithCountryCode};
