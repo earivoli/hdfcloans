@@ -579,8 +579,8 @@ function waitForSessionValue(callback,max=30,interval=500){
 function sliderToupdate(rangeSlider,min,max){
   console.log("Min,max,range",min,max,rangeSlider)
   if(rangeSlider){
-        rangeSlider.min = min;
         rangeSlider.max = max;
+        rangeSlider.min = min;
         rangeSlider.value = max;
         const wrapper = rangeSlider.parentElement;
         console.log(wrapper)
