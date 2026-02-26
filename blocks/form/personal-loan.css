@@ -1,72 +1,45 @@
-/* Desktop only */
 @media screen and (min-width: 1024px) {
 
-  /* Root form container (the header fragment) */
   .form.block[data-aue-model="form"][data-aue-label="Adaptive Form"]
     > div > div > form {
-    /* Header bar styling */
-    background: #5B4BDF; /* Violet */
+    background: #5B4BDF; 
     min-height: 88px;
     padding: 16px 32px;
-
-    /* Layout */
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-
-    /* EDS feel */
     border-radius: 10px;
     box-shadow: 0 4px 14px rgba(16, 24, 40, 0.08);
   }
 
-  /* Remove default margins around picture wrappers */
   .field-wrapper.image-wrapper {
     margin: 0;
   }
 
-  /* Left logo (HDFC) */
   #image-0db345f307 picture,
   #image-0db345f307 img {
     display: block;
-    height: 40px;          /* Keeps header slim and clean */
+    height: 40px;         
     width: auto;
   }
-
-  /* Right-side decorative/hero image */
   #image-4966a5d564 picture,
   #image-4966a5d564 img {
     display: block;
-    height: 56px;          /* Slightly larger for visual balance */
+    height: 56px;          
     width: auto;
   }
 
-  /* Ensure the two image wrappers are inline and don’t stretch */
   #image-0db345f307,
   #image-4966a5d564 {
     display: block;
     flex: 0 0 auto;
   }
 
-  /* Optional: limit max width so header doesn’t stretch too wide on large monitors */
   .form.block[data-aue-model="form"][data-aue-label="Adaptive Form"]
     > div > div > form {
     max-width: 1280px;
     margin: 0 auto;
   }
 
-  /* Optional: better contrast on dark/violet background if logo is dark */
-  /* Uncomment if needed to brighten dark logos
-  #image-0db345f307 img,
-  #image-4966a5d564 img {
-    filter: brightness(0) invert(1);
-  }
-  */
-
-  /* If the right image is too tall on some screens, clamp it */
-  @media (min-width: 1440px) {
-    #image-4966a5d564 img {
-      height: 64px;
-    }
-  }
 }
