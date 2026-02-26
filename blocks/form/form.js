@@ -581,6 +581,7 @@ function sliderToupdate(rangeSlider,min,max){
   if(rangeSlider){
         rangeSlider.min = min;
         rangeSlider.max = max;
+        rangeSlider.value = max;
         const wrapper = rangeSlider.parentElement;
         console.log(wrapper)
         const rangeMin = wrapper.querySelector(".range-min");
