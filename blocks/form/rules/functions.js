@@ -275,8 +275,8 @@ function concatWithLoanAmount(text,loan){
  */
 function saveToSession(fieldName,value){
   //sma
-  sessionStorage.clear();
-  sessionStorage.setItem(fieldName._data.$_name,value)
+  sessionStorage.removeItem("offerAmount")
+  sessionStorage.setItem("offerAmount",value)
 }
 function calculateEMI(principal,rateofinterst,numberofmonths){
   console.log("P",principal);
