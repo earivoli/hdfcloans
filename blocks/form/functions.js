@@ -126,6 +126,38 @@ function validatePANcard(pan){
   }
 }
 
+function rangeAmountSet(fieldName,min,max,globals){
+
+  console.log("Field Name2:",fieldName._data.$_name)
+  console.log("Min Name:",min)
+  console.log("Max Name:",max)
+  console.log(fieldName)
+
+  fieldName.min = min;
+  fieldName.max = max;
+
+
+  globals.field.range1771698422113.min=10;
+    globals.field.range1771698422113.max=2345;
+     globals.field.range1771698422113.val=2345;
+     
+        //  console.log("Globals Name:",globals.field.range1771698422113.val)
+
+            console.log("Globals Name:",globals.field)
+
+
+  fieldName._jsonModel.minimum = 1000;
+  fieldName._jsonModel.maximum = 100000;
+
+  console.log(fieldName.min)
+  console.log(fieldName.max)
+
+  const input = fieldName._data?.element?.querySelector('input') || fieldName.element?.querySelector('input') ;
+  console.log(input)
+
+
+}
+
 
 
 /**
@@ -143,4 +175,4 @@ function maskMobileNumber(mobileNumber) {
   return ` ${'*'.repeat(5)}${value.substring(5)}`;
 }
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,isValidMobileNumber,validatePANcard,validateDOB,maskMobileNumber};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,isValidMobileNumber,validatePANcard,validateDOB,maskMobileNumber,rangeAmountSet};
