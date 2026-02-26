@@ -854,21 +854,6 @@ main .form.block form{
 .section.fragment-container input,#dropdown-2a01ff1480,dropdown-2a01ff1480{
     border: 2px solid grey;
 }
-.section.fragment-container .field-country-mobile-panel .field-mobilenumber input[type="text"]
-{
-    width: 305px;
-    border-left: none;
-    height: 50px;
-    border-radius: 0;
-    padding: 25px;
-    border-top-right-radius: 14px;
-    border-bottom-right-radius: 14px;
-    margin-right: 5px;
-    margin-left: 40px;
-    padding-right: 10px;
-    letter-spacing: 10px;
-    margin-top: 10px;
-}
 
 .pl-offers-page .form form .text-wrapper.field-mobilenumber.field-wrapper input{
         font-size: 20px;

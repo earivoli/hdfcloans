@@ -1,6 +1,14 @@
 @media (min-width: 1024px) {
 
-  .form.block[data-block-name="form"] form {
+
+  header{
+    display: none;
+  }
+
+  main .form-wrapper:first-of-type{
+    padding-top: 0px;
+  }
+   main .form-wrapper:first-of-type .form.block[data-block-name="form"] form {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -14,28 +22,47 @@
     margin: 0 auto;
   }
 
-  .form.block .image-wrapper {
+  main .form-wrapper:first-of-type .form.block .image-wrapper {
     margin: 0;
   }
 
-  #image-0db345f307 picture,
-  #image-0db345f307 img {
+  main .form-wrapper:first-of-type #image-0db345f307 picture,
+  main .form-wrapper:first-of-type #image-0db345f307 img {
     display: block;
     height: 40px;
     width: auto;
   }
 
-  #image-4966a5d564 picture,
-  #image-4966a5d564 img {
+  main .form-wrapper:first-of-type #image-4966a5d564 picture,
+  main .form-wrapper:first-of-type #image-4966a5d564 img {
     display: block;
     height: 56px;
     width: auto;
   }
 
-  #image-0db345f307,
-  #image-4966a5d564 {
+  main .form-wrapper:first-of-type #image-0db345f307,
+   main .form-wrapper:first-of-type #image-4966a5d564 {
     flex: 0 0 auto;
   }
 
+ .section.fragment-container .field-country-mobile-panel .field-mobilenumber input[type="text"]
+{
+    width: 305px;
+    height: 55px;
+    border-radius: 0;
+    padding: 25px;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    padding-right: 10px;
+    letter-spacing: 10px;
+    margin-left: -8%;
+    font-size: 1.4rem;
+}
 
+.section.fragment-container .field-country-mobile-panel .field-countrycode select{
+ height: 55px;
+ border-top-left-radius: 14px;
+ border-bottom-left-radius: 14px;
+ margin-top: 3px;
+}
 }
