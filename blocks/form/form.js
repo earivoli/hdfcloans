@@ -508,7 +508,6 @@ function loadFormCustomStyles(formDef) {
 
 function waitForSessionValue(callback,max=30,interval=500){
   let attempts = 0;
-
   const poll = setInterval(()=>{
     const value = sessionStorage.getItem("offerAmount");
     ++attempts;
@@ -554,7 +553,7 @@ function waitForSessionValue(callback,max=30,interval=500){
     sliderToupdate(tenureRangeSlider,12,tenure);
       tenureRangeSlider.addEventListener("input",function(){
           const tenureInput =  form.querySelector('.field-emi-tenure-panel .field-emi-tenure-input input');
-          const hiddenInput = form.querySelector('.field-hiddeninputofinterst input')
+          const hiddenInput = form.querySelector('.field-hiddeninputoftenure input')
           if(tenureInput && hiddenInput){
             const amountTodestination = form.querySelector('.field-loan-tenure-range .range-bubble');
             console.log(amountTodestination)
