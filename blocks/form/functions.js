@@ -165,6 +165,16 @@ function rangeAmountSet(fieldName,min,max,globals){
 
 
 }
+/*
+ * Custom submit function
+ * @name saveToSession
+ * @param {object} fieldName
+ * @param {scope} globals
+ */
+function setFormDatatoSession(fieldName){
+  //sma
+ console.log(fieldName);
+}
 
 
 
@@ -183,4 +193,4 @@ function maskMobileNumber(mobileNumber) {
   return ` ${'*'.repeat(5)}${value.substring(5)}`;
 }
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,isValidMobileNumber,validatePANcard,validateDOB,maskMobileNumber,rangeAmountSet};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,isValidMobileNumber,validatePANcard,validateDOB,maskMobileNumber,rangeAmountSet,setFormDatatoSession};
