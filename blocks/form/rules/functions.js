@@ -278,6 +278,18 @@ function saveToSession(fieldName,value){
   sessionStorage.removeItem("offerAmount")
   sessionStorage.setItem("offerAmount",value)
 }
+
+/**
+ * Custom submit function
+ * @name saveToSession
+ * @param {object} fieldName
+ * @param {scope} globals
+ */
+function setFormDatatoSession(fieldName){
+  //sma
+ console.log(fieldName);
+}
+
 function calculateEMI(principal,rateofinterst,numberofmonths){
   console.log("P",principal);
   console.log("N",numberofmonths);
@@ -433,5 +445,6 @@ export {
   validatePANcard,
   validateDOB,
   maskMobileNumber,
-  rangeAmountSet
+  rangeAmountSet,
+  setFormDatatoSession
 };
