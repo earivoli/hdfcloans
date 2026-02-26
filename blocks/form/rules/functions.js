@@ -287,13 +287,10 @@ function saveToSession(fieldName,value){
  */
 function setFormDatatoSession(fieldName){
   //sma
- console.log(fieldName);
+ console.log("field::-",fieldName);
 }
 
 function calculateEMI(principal,rateofinterst,numberofmonths){
-  console.log("P",principal);
-  console.log("N",numberofmonths);
-  console.log("R",rateofinterst)
   const r = rateofinterst / (12 * 100);
   console.log(r)
   const EMI = (principal * r * Math.pow(1 + r ,numberofmonths))/(Math.pow(1+r,numberofmonths)-1);
@@ -327,6 +324,11 @@ function isValidMobileNumber(mobile){
   }
 
 }
+
+function combineMobileWithCountryCode(code,mobile){
+  console.log("country + mobile",code,mobile)
+}
+
 /**
  * Custom submit function
  * @name rangeAmountSet
@@ -446,5 +448,6 @@ export {
   validateDOB,
   maskMobileNumber,
   rangeAmountSet,
-  setFormDatatoSession
+  setFormDatatoSession,
+  combineMobileWithCountryCode
 };
