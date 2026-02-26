@@ -315,14 +315,7 @@ function isValidMobileNumber(mobile){
   }
 
 }
-/**
- * Custom submit function
- * @name rangeAmountSet
- * @param {object} fieldName
- * @param {number} text
- * @param {number} loan
- * @param {scope} globals
- */
+
 function rangeAmountSet(fieldName,min,max,globals){
 
   console.log("Field Name2:",fieldName._data.$_name)
