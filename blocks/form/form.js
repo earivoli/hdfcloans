@@ -544,8 +544,8 @@ function waitForSessionValue(callback,max=30,interval=500){
           if(amountInput){
             const amountTodestination = form.querySelector('.field-loan-amount-range .range-bubble')
             amountInput.value = amountTodestination.innerText;
+            console.log("Reached Here")
             amountInput.dispatchEvent(new Event("input",{bubbles:true}))
-            amountInput.dispatchEvent(new Event("change",{bubbles:true}))
           }
       })
     }
@@ -560,7 +560,6 @@ function waitForSessionValue(callback,max=30,interval=500){
             tenureInput.value = amountTodestination.innerText + " Months";
             hiddenInput.value = amountTodestination.innerText;
             hiddenInput.dispatchEvent(new Event("input",{bubbles:true}))
-            hiddenInput.dispatchEvent(new Event("change",{bubbles:true}))
           }
       })
     }
