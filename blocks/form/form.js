@@ -598,15 +598,17 @@ function sliderToupdate(rangeSlider,min,max){
 
 export default async function decorate(block) {
   document.addEventListener("change",function(e){
-    if(e.target.name==="radiobutton-474f7b5896_source_of_income"){
+    if(e.target.name==="radiobutton-09b4d9007a_source_of_income"){
       if(e.target.value==="salaried"){
         console.log('True')
-        const move = document.getElementById("text-6aa1ad05f3");
+        const move = document.getElementById("text-1b8e10ec1f");
         const element = document.querySelector('[data-id="source-of-income"]');
         element.append(move)
       }
     }
   })
+
+  // const savedstep = block.querySelectorAll('.panel-wrapper')
 
   
   waitForTheFormLoads(block);
