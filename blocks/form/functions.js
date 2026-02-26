@@ -193,6 +193,12 @@ function maskMobileNumber(mobileNumber) {
   return ` ${'*'.repeat(5)}${value.substring(5)}`;
 }
 
+/*
+ * Custom submit function
+ * @name combineMobileWithCountryCode
+ * @param {object} code
+ * @param {object} mobile
+ */
 function combineMobileWithCountryCode(code,mobile){
   console.log("country + mobile",code,mobile)
 }

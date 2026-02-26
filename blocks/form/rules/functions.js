@@ -324,7 +324,12 @@ function isValidMobileNumber(mobile){
   }
 
 }
-
+/*
+ * Custom submit function
+ * @name combineMobileWithCountryCode
+ * @param {object} code
+ * @param {object} mobile
+ */
 function combineMobileWithCountryCode(code,mobile){
   console.log("country + mobile",code,mobile)
 }
