@@ -506,6 +506,21 @@ function loadFormCustomStyles(formDef) {
   }
 }
 
+function waitForSessionValue(callback,max=30,interval=500){
+  let attempts = 0;
+
+  const poll = setInterval(()=>{
+    const value = sessionStorage.getItem("offerAmount");
+    ++attempts;
+    if(value!==null && value !=undefined){
+        clearInterval(poll);
+        callback(value);
+    }else if(attempts>max){
+      clearInterval(poll);
+    }
+  },interval)
+
+}
 
  function waitForTheFormLoads(block){
 
@@ -513,87 +528,46 @@ function loadFormCustomStyles(formDef) {
     if(block.dataset.blockStatus === 'loaded'){
     obs.disconnect();
     const form = block.querySelector('form');
-
-    //offers-page.js
-      // 1.Case Icon
-    const cashIcon = form.querySelector('#image-138a1ea507 img');
-    console.log(cashIcon)
-    if(cashIcon){
-      cashIcon.remove()
-      const newImage = document.createElement('img');
-      newImage.src = '../../icons/hdfc/cash_icon.png'
-      form.querySelector('#image-138a1ea507').appendChild(newImage)
-    }
-
-    const OTPClick = form.querySelector('.field-panel-12477171871771494397363 .field-form-submit.field-wrapper button');
-    if(OTPClick){
-    OTPClick.addEventListener('Click',function(){
-    const timeId = form.querySelector('#text-d53735b422 p strong');
-    if(timeId){
-    let timeInsecond = 30;
-    const countDown = setInterval(()=>{
-      --timeInsecond;
-      if(timeInsecond==0){
-        clearInterval(countDown);
-        const resendOTP = document.createElement('a');
-       resendOTP.href="/";
-      resendOTP.innerText ="Resend OTP"
-      // form.querySelector('#text-d53735b422 p').remove();
-      form.querySelector('#text-d53735b422').appendChild(resendOTP)
-      }
-      timeId.innerText = timeInsecond + " seconds";
-    },1000)
-   
-    }
-  });
-}
-
       //2.Range slider
-    const amountRangeSlider = form.querySelector("#numberinput-8e59a04b18");
-    const tenureRangeSlider = form.querySelector("#numberinput-93379f3203");
-      let offerAmount = 1500000;
-      if(sessionStorage.getItem("offerAmount")){
-          offerAmount = sessionStorage.getItem("offerAmount")
-      }
-      let tenure = 84;
-      if(sessionStorage.getItem("tenure")){
-          offerAmount = sessionStorage.getItem("tenure")
-      }
-      sliderToupdate(amountRangeSlider,50000,offerAmount)
-     sliderToupdate(tenureRangeSlider,12,tenure)
-
-      if(amountRangeSlider){
-      amountRangeSlider.addEventListener("input",function(){
-          const amountInput =  form.querySelector('#textinput-3a5e56fe44');
+    const amountRangeSlider = form.querySelector(".field-slider-and-loan-panel .field-loan-amount-range .range-widget-wrapper input");
+    const tenureRangeSlider = form.querySelector(".field-emi-tenure-panel .field-loan-tenure-range .range-widget-wrapper input");
+    let offerAmount = 1500000
+    let tenure = 84;
+    sessionStorage.removeItem("offerAmount")
+    if(amountRangeSlider && tenureRangeSlider){
+    waitForSessionValue((amount)=>{
+      offerAmount = amount;
+      sliderToupdate(amountRangeSlider,50000,offerAmount);
+    })
+    console.log("offerAmount is from the session",offerAmount,typeof(offerAmount))
+    amountRangeSlider.addEventListener("input",function(){
+          const amountInput =  form.querySelector('.field-slider-and-loan-panel .field-overall-amount-in-body input');
           if(amountInput){
             const amountTodestination = form.querySelector('.field-loan-amount-range .range-bubble')
             amountInput.value = amountTodestination.innerText;
-
             amountInput.dispatchEvent(new Event("input",{bubbles:true}))
             amountInput.dispatchEvent(new Event("change",{bubbles:true}))
           }
       })
     }
     if(tenureRangeSlider){
+    sliderToupdate(tenureRangeSlider,12,tenure);
       tenureRangeSlider.addEventListener("input",function(){
-          const tenureInput =  form.querySelector('#textinput-d4e9fd0571');
-          const hiddenInput = form.querySelector('#textinput-d2aa2a6791')
+          const tenureInput =  form.querySelector('.field-emi-tenure-panel .field-emi-tenure-input input');
+          const hiddenInput = form.querySelector('.field-hiddeninputofinterst input')
           if(tenureInput && hiddenInput){
             const amountTodestination = form.querySelector('.field-loan-tenure-range .range-bubble');
             console.log(amountTodestination)
             tenureInput.value = amountTodestination.innerText + " Months";
             hiddenInput.value = amountTodestination.innerText;
-
             hiddenInput.dispatchEvent(new Event("input",{bubbles:true}))
             hiddenInput.dispatchEvent(new Event("change",{bubbles:true}))
           }
       })
     }
-    
-   
+      
     }   
   });
-
   observer.observe(block,{
     attributes:true,
     attributeFilter:['data-block-status'],
@@ -603,11 +577,10 @@ function loadFormCustomStyles(formDef) {
 }
 
 function sliderToupdate(rangeSlider,min,max){
+  console.log("Min,max,range",min,max,rangeSlider)
   if(rangeSlider){
-    console.log("True")
         rangeSlider.min = min;
         rangeSlider.max = max;
-        rangeSlider.val = max;
         const wrapper = rangeSlider.parentElement;
         console.log(wrapper)
         const rangeMin = wrapper.querySelector(".range-min");
@@ -634,6 +607,7 @@ export default async function decorate(block) {
     }
   })
 
+  
   waitForTheFormLoads(block);
 
 
