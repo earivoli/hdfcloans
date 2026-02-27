@@ -203,6 +203,15 @@ function combineMobileWithCountryCode(code,mobile){
   console.log("country + mobile",code,mobile)
 }
 
+/*
+ * Custom submit function
+ * @name convertDateToString
+ * @param {Date} date
+ * @param {object} mobile
+ */
+function convertDateToString(date){
+  console.log("Value of Date is",date);
+}
 
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,isValidMobileNumber,validatePANcard,validateDOB,maskMobileNumber,rangeAmountSet,setFormDatatoSession,combineMobileWithCountryCode};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,isValidMobileNumber,validatePANcard,validateDOB,maskMobileNumber,rangeAmountSet,setFormDatatoSession,combineMobileWithCountryCode,convertDateToString};
