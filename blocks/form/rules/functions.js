@@ -406,5 +406,6 @@ export {
   rangeAmountSet,
   setFormDatatoSession,
   combineMobileWithCountryCode,
-  validateOTP
+  validateOTP,
+  validatePhoneNumber
 };

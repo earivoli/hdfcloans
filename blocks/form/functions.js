@@ -166,7 +166,15 @@ function validateOTP(otp){
   }
   return false;
 }
+function validatePhoneNumber(phone){
+  console.log("Value",phone);
+  if(phone.length == 10){
+    return true;
+  }else{
+    return false;
+  }
+}
 
 
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,maskMobileNumber,rangeAmountSet,setFormDatatoSession,combineMobileWithCountryCode,validateOTP};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,maskMobileNumber,rangeAmountSet,setFormDatatoSession,combineMobileWithCountryCode,validateOTP,validatePhoneNumber};
