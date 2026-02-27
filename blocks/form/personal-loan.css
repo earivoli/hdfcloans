@@ -65,4 +65,31 @@
  border-bottom-left-radius: 14px;
  margin-top: 3px;
 }
+
+.field-otp-input input[type="text"]
+{
+    height: 60px;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    letter-spacing: 65px;
+    font-size: 20px;
+    border-radius: 16px;
+    text-align: center;
+}.field-otp-input input[type="text"]::placeholder
+{
+    text-align: center
+}
+
+.field-otp-input button{
+  border-radius: 16px;
+}
+.field-attempts-left p p{
+  width: max-content;
+}
+ main .form.block form .plain-text-wrapper.field-plain-text1771495264010,
+ main .form.block form .plain-text-wrapper.field-plain-text1771495264010 *{
+  margin: 0;
+}
+
 }
