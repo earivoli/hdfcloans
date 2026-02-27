@@ -42,26 +42,8 @@ function days(endDate, startDate) {
   return Math.floor(diffInMs / (1000 * 60 * 60 * 24));
 }
 
-/**
- * Custom submit function
- * @name rangeAmountSet
- * @param {object} fieldName
- * @param {number} text
- * @param {number} loan
- * @param {scope} globals
- */
 
-// function rangeAmountSet(fieldName,min,max,globals){
 
-//   console.log("Field Name:",fieldName.$data.$name)
-//   console.log("Min Name:",min)
-//   console.log("Max Name:",max)
-//   console.log("Globals Name:",globals)
-
-//   fieldName.min = min;
-//   fieldName.max = max;
-
-// }
 /**
  * Custom submit function
  * @name saveToSession
@@ -99,32 +81,7 @@ function returnFullAddress(address1,address2,address3,state,city,zip){
   return fullAddress;
 }
 
-function isValidMobileNumber(mobile){
-    console.log("Type",typeof(mobile))
-  console.log("Mobile",mobile.value)
-  console.log("A",mobile._data.$_value);
 
-  if(!mobile){
-    return false;
-  }
-  if(mobile.length==10){
-    return true;
-  }else{
-    return false;
-  }
-
-}
-function validatePANcard(pan){
-  if(pan.length !=0 || !pan){
-    return "length"
-  }
-  if(pan[3]!=='P'){
-    return "not personal"
-  }
-  if(pan[3]==='P'){
-    return "valid"
-  }
-}
 
 /**
  * Custom submit function
@@ -203,19 +160,6 @@ function combineMobileWithCountryCode(code,mobile){
   console.log("country + mobile",code,mobile)
 }
 
-/*
- * Custom submit function
- * @name convertDateToString
- * @param {Date} date
- * @param {object} mobile
- */
-function convertDateToString(date){
-  console.log("Value of Date is",date);
-  console.log("type of",typeof(date))
-  console.log("to string",dob.toString())
-
-  return date;
-}
 
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,isValidMobileNumber,validatePANcard,validateDOB,maskMobileNumber,rangeAmountSet,setFormDatatoSession,combineMobileWithCountryCode,convertDateToString};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,maskMobileNumber,rangeAmountSet,setFormDatatoSession,combineMobileWithCountryCode};
