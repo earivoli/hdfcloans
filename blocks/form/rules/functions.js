@@ -442,6 +442,8 @@ function maskMobileNumber(mobileNumber) {
  */
 function convertDateToString(date){
   console.log("Value of Date is",date);
+  console.log("type of",typeof(date))
+  console.log("to string",dob.toString())
 }
 
 export {
