@@ -363,7 +363,6 @@ function rangeAmountSet(fieldName,min,max,globals){
 }
 
 function maskMobileNumber(mobileNumber) {
-  console.log("Value",mobileNumber)
   if (!mobileNumber) {
     return '';
   }
@@ -378,6 +377,14 @@ function validateOTP(otp){
     return true;
   }
   return false;
+}
+function validatePhoneNumber(phone){
+  console.log("Value",phone);
+  if(phone.length == 10){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 export {
