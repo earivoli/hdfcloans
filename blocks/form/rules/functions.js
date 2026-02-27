@@ -311,20 +311,7 @@ function returnFullAddress(address1,address2,address3,state,city,zip){
   return fullAddress;
 }
 
-function isValidMobileNumber(mobile){
-  console.log(typeof(mobile._data.$_value));
-  const data = mobile._data.$_value
-  if(!data){
-    return false;
-  }
-  if(data.length==10){
-    console.log("True..")
-    return true;
-  }else{
-    return false;
-  }
 
-}
 /*
  * Custom submit function
  * @name combineMobileWithCountryCode
@@ -375,56 +362,6 @@ function rangeAmountSet(fieldName,min,max,globals){
 
 }
 
-function validatePANcard(pan){
-  if(pan.length !=0 || !pan){
-    return "length"
-  }
-  if(pan[3]!=='P'){
-    return "not personal"
-  }
-  if(pan[3]==='P'){
-    return "valid"
-  }
-}
-
-function validateDOB(dob){
-
-  if(!dob){
-    return String(false);
-  }
-
-  const parts = dob.split("-");
-  if(parts.length!=3){
-    return String(false);
-  }
-
-  const day = parseInt(parts[0],10);
-
-  const Months = parseInt(parts[1],10);
-
-  const year = parseInt(parts[2],10);
-
-  const datepicked = new Date(year,Months,day);
-  const today = new Date();
-
-  if(datepicked>today){
-    return "feature date";
-  }
-
-  let age = today.getFullYear()-datepicked.getFullYear();
-
-  const m = today.getMonth()-datepicked.getMonth();
-
-  if(m<0 || (m==0 && today.getDate()<datepicked.getDate())){
-    age--;
-  }
-
-  if(age<18){
-    return "minor"
-  }
-
-}
-
 function maskMobileNumber(mobileNumber) {
   console.log("Value",mobileNumber)
   if (!mobileNumber) {
@@ -435,17 +372,12 @@ function maskMobileNumber(mobileNumber) {
   return ` ${'*'.repeat(5)}${value.substring(5)}`;
 }
 
-/*
- * Custom submit function
- * @name convertDateToString
- * @param {Date} date
- * @param {object} mobile
- */
-function convertDateToString(date){
-  console.log("Value of Date is",date);
-  console.log("type of",typeof(date))
-  console.log("to string",dob.toString())
-  return date;
+function validateOTP(otp){
+  console.log("OTP",otp.legth,otp)
+  if(otp.legth==6){
+    return true;
+  }
+  return false;
 }
 
 export {
@@ -463,12 +395,9 @@ export {
   calculateEMI,
   returnFullCustName,
   returnFullAddress,
-  isValidMobileNumber,
-  validatePANcard,
-  validateDOB,
   maskMobileNumber,
   rangeAmountSet,
   setFormDatatoSession,
   combineMobileWithCountryCode,
-  convertDateToString
+  validateOTP
 };
