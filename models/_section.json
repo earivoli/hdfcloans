@@ -45,7 +45,12 @@
             {
               "name": "Review Details Page",
               "value": "review-details-page"
+            },
+              {
+              "name": "Final Page",
+              "value": "final-page-hdfc"
             }
+
           ]
         }
       ]
