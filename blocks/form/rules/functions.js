@@ -387,6 +387,13 @@ function validatePhoneNumber(phone){
   }
 }
 
+function validatePAN(pan){
+  const number = String(pan).toUpperCase();
+  const regexTest = /^[A-Z]{3}P[A-Z][0-9]{4}[A-Z]$/;
+  return regexTest.test(number);
+}
+
+
 export {
   externalize,
   validateURL,
@@ -407,5 +414,6 @@ export {
   setFormDatatoSession,
   combineMobileWithCountryCode,
   validateOTP,
-  validatePhoneNumber
+  validatePhoneNumber,
+  validatePAN
 };
