@@ -174,7 +174,11 @@ function validatePhoneNumber(phone){
     return false;
   }
 }
-
+function validatePAN(pan){
+  const number = String(pan).toUpperCase();
+  const regexTest = /^[A-Z]{3}P[A-Z][0-9]{4}[A-Z]$/;
+  return regexTest.test(number);
+}
 
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,maskMobileNumber,rangeAmountSet,setFormDatatoSession,combineMobileWithCountryCode,validateOTP,validatePhoneNumber};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,maskMobileNumber,rangeAmountSet,setFormDatatoSession,combineMobileWithCountryCode,validateOTP,validatePhoneNumber,validatePAN};
