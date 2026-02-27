@@ -373,8 +373,8 @@ function maskMobileNumber(mobileNumber) {
 }
 
 function validateOTP(otp){
-  console.log("OTP",otp.legth,otp)
-  if(otp.legth==6){
+  console.log("OTP",otp.length,otp)
+  if(otp.length==6){
     return true;
   }
   return false;
