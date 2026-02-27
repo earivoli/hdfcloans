@@ -327,7 +327,7 @@ function isValidMobileNumber(mobile){
 /*
  * Custom submit function
  * @name combineMobileWithCountryCode
- * @param {object} code
+ * @param {number} code
  * @param {object} mobile
  */
 function combineMobileWithCountryCode(code,mobile){
@@ -433,6 +433,17 @@ function maskMobileNumber(mobileNumber) {
   // Mask first 5 digits and keep the rest
   return ` ${'*'.repeat(5)}${value.substring(5)}`;
 }
+
+/*
+ * Custom submit function
+ * @name convertDateToString
+ * @param {Date} date
+ * @param {object} mobile
+ */
+function convertDateToString(date){
+  console.log("Value of Date is",date);
+}
+
 export {
   externalize,
   validateURL,
@@ -454,5 +465,6 @@ export {
   maskMobileNumber,
   rangeAmountSet,
   setFormDatatoSession,
-  combineMobileWithCountryCode
+  combineMobileWithCountryCode,
+  convertDateToString
 };
