@@ -159,7 +159,14 @@ function maskMobileNumber(mobileNumber) {
 function combineMobileWithCountryCode(code,mobile){
   console.log("country + mobile",code,mobile)
 }
+function validateOTP(otp){
+  console.log("OTP",otp.legth,otp)
+  if(otp.legth==6){
+    return true;
+  }
+  return false;
+}
 
 
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,maskMobileNumber,rangeAmountSet,setFormDatatoSession,combineMobileWithCountryCode};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,maskMobileNumber,rangeAmountSet,setFormDatatoSession,combineMobileWithCountryCode,validateOTP};
