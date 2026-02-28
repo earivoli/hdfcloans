@@ -246,6 +246,20 @@ function dateToDaysSinceEpoch(date) {
 
 /**
  * Custom submit function
+ * @name concatWithLoanAmount
+ * @param {string} text
+ * @param {number} loan
+ */
+function concatWithLoanAmount(text,loan){
+  console.log(text,loan);
+  return text + loan;
+}
+
+
+
+
+/**
+ * Custom submit function
  * @name saveToSession
  * @param {object} fieldName
  * @param {number} value
