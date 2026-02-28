@@ -566,8 +566,42 @@ function waitForSessionValue(callback,max=30,interval=500){
       })
     }
       
-    }   
+
+    //thankyou page
+    const thankyouTextElement = document.querySelector('main .form.block .field-sub-card-panel-1 .field-plain-text1771837437953:first-of-type p p');
+    if(thankyouTextElement){
+      const imageForThankyou = document.createElement('img')
+      imageForThankyou.src = "https://main--hdfcloans--earivoli.aem.page/icons/hdfc/form_icon.png"
+      const parent = document.querySelector('main .form.block .field-sub-card-panel-1 .field-plain-text1771837437953 p');
+      thankyouTextElement.remove();
+      parent.appendChild(imageForThankyou);
+      }   
+
+      
+      const image1Element = document.querySelector('main .form.block .field-right-side-panel .field-plain-text1771838902119:first-of-type p')
+      // const image2Element = document.querySelector('main .form.block .field-right-side-panel ') 
+      const image2Element = document.querySelector('main .form.block .field-right-side-panel .field-plain-text1771838902119:nth-of-type(2) p')
+ 
+      if(image1Element){
+          const imag1 = document.createElement('img')
+          imag1.src="https://main--hdfcloans--earivoli.aem.page/icons/hdfc/image_1.png";
+          const image1Elementparent = document.querySelector('main .form.block .field-right-side-panel .field-plain-text1771838902119:first-of-type')
+          image1Element.remove();
+          image1Elementparent.appendChild(imag1);
+        }
+         if(image2Element){
+          const imag1 = document.createElement('img')
+          imag1.src="https://main--hdfcloans--earivoli.aem.page/icons/hdfc/image_2.png";
+          const image1Elementparent = document.querySelector('main .form.block .field-right-side-panel .field-plain-text1771838902119:nth-of-type(2)')
+          image2Element.remove();
+          image1Elementparent.appendChild(imag1);
+        }
+
+  }
   });
+
+
+
   observer.observe(block,{
     attributes:true,
     attributeFilter:['data-block-status'],

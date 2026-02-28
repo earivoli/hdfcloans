@@ -91,5 +91,65 @@
  main .form.block form .plain-text-wrapper.field-plain-text1771495264010 *{
   margin: 0;
 }
+main .form.block .field-card-panel{
+  border: 2px rgb(127, 203, 203) ;
+  background-color: white;
+}
+main .form.block form .field-loan-application-input{
+  margin-bottom: 0;
+  margin-top: 12%;
+  height: 50px;
+}
+main .form.block form .field-loan-application-input input{
+  pointer-events: none;
+  border: none;
+  font-size: 1.8rem; 
+  color: black;
+  font-weight: bold;
+  padding-left: 0;
+}
+main .form.block form .field-plain-text1771837437953{
+  height: 135px;
+}
+main .form.block .field-sub-card-panel-2 {
+  border-top:2px dotted grey;
+  padding-top: 2%;
+}
+main .form.block .field-sub-card-panel-2 p {
+  font-size: 1.4rem;
+  color: black;
+}
+
+main .form.block .field-loan-amount-input input{
+  pointer-events: none;
+  padding-left: 0px;
+  border: none;
+  font-weight: bold;
+  color: black;
+}
+main .form.block .field-loan-amount-input {
+  border-left: 2px solid blue;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 5%;
+}
+main .form.block .field-blue-panel{
+  background-color: #ccfdfd;
+  border-radius: 16px;
+  padding: 10px;
+  
+}
+main .form.block .field-blue-panel p{
+  margin-bottom: 0;
+  color: blue;
+  width: 100%;
+  font-size: 1rem;
+}
+
+main .form.block .field-right-side-panel img{
+  height: 300px;
+  width: 300px;
+  border-radius: 16px;
+}
 
 }
