@@ -379,7 +379,17 @@ function validatePAN(pan){
   const regexTest = /^[A-Z]{3}P[A-Z][0-9]{4}[A-Z]$/;
   return regexTest.test(number);
 }
-
+function returnAsINRAmount(amount){
+  if(!amount){
+    return ''
+  }
+  const formatted = amount.toLocaleString("en-IN",{
+    style : "currency",
+    currency:"INR"
+  });
+  console.log("Formateed String",formatted);
+  return formatted;
+}
 
 export {
   externalize,
@@ -400,5 +410,6 @@ export {
   rangeAmountSet,
   validateOTP,
   validatePhoneNumber,
-  validatePAN
+  validatePAN,
+  returnAsINRAmount
 };
