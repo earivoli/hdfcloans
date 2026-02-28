@@ -275,8 +275,9 @@ function concatWithLoanAmount(text,loan){
  */
 function saveToSession(fieldName,value){
   //sma
-  sessionStorage.removeItem("offerAmount")
-  sessionStorage.setItem("offerAmount",value)
+  console.log("Session Saving values",fieldName._data.$_name)
+  sessionStorage.removeItem("fieldName._data.$_name")
+  sessionStorage.setItem(fieldName._data.$_name,value)
 }
 
 /**
