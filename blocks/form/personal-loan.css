@@ -227,6 +227,8 @@ button[type="submit"]{
     flex: 0 0 auto;
   }
 
+
+
  .section.fragment-container .field-country-mobile-panel .field-mobilenumber input[type="text"]
 {
     width: 305px;
@@ -239,6 +241,18 @@ button[type="submit"]{
     letter-spacing: 10px;
     margin-left: -8%;
     font-size: 1.4rem;
+}
+.section.fragment-container .field-pan-card-input-main-input input[type="text"]{
+  width: 305px;
+  height: 55px;
+  padding-right: 10px;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  border-radius: 16px;
+}
+.section.fragment-container .field-pan-card-input-main-input input[type="text"]::placeholder{
+  letter-spacing: 0;
+  font-size:medium
 }
 
 .section.fragment-container .field-country-mobile-panel .field-countrycode select{
@@ -559,7 +573,7 @@ main .form.block .field-review-page .field-review-details-text p p:nth-of-type(2
 }
 
 main .form.block button {
-  background-color: var(--hdfc-button-color);
+  /* background-color: var(--hdfc-button-color); */
   border-radius: 16px;
   width: 30%;
 }
