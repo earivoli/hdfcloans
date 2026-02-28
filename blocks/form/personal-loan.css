@@ -337,9 +337,13 @@ main .form.block .field-plain-text1771676247795{
 }
 main .form.block .field-offers-page input[type="text"]
 {
-  border: none;
   pointer-events: none;
   outline: none;
+}
+main .form.block .field-offers-page .field-loan-amount-text-input input[type="text"],
+main .form.block .field-offers-page  .field-amount-in-card-inr input
+{
+  border: none;
 }
 main .form.block .field-blue-color-container-dynamic-panel {
   background-color: #EAFcFE ;

@@ -187,6 +187,7 @@ function returnAsINRAmount(amount){
     return ''
   }
   const formatted = amount.toLocaleString("en-IN",{
+    maximumFractionDigits:0,
     style : "currency",
     currency:"INR"
   });
