@@ -1,10 +1,187 @@
 @media (min-width: 1024px) {
 
 
+  /*otp-logincss*/
+
+  /* Global Margin Set */
+.dropdown-2a01ff1480-description,.field-countrycode
+.section.fragment-container .fragment-wrapper,
+.section.fragment-container .field-country-mobile-panel .field-mobilenumber,
+.section.fragment-container .field-country-mobile-panel .field-mobilenumber input[type="number"]
+.form.block .date-wrapper.field-dob.field-wrapper.col-3 input[type="text"]
+{
+    margin: 0;
+}
+
+
+.fragment-container .fragment-wrapper .fragment.block.form-container{
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    margin-top: 16px;
+}
+.field-countrycode #dropdown-b6e496eb02{
+    width: auto;
+    height: 53px;
+    margin-top: 5px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+.section.fragment-container.columns-container .fragment-container .fragment-wrapper .fragment.block.form-container{
+    position: relative;
+}
+.section.fragment-container.columns-container .fragment-container .fragment-wrapper .fragment.block.form-container::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 2.5%;
+    right: 2.5%;
+    height: 2px;
+    background: gray;
+}
+
+.section.fragment-container .fragment-wrapper{
+    max-width: 1400px;
+}
+.section.fragment-container input,#dropdown-2a01ff1480,dropdown-2a01ff1480{
+    border: 2px solid grey;
+}
+
+.pl-offers-page .form form .text-wrapper.field-mobilenumber.field-wrapper input{
+        font-size: 20px;
+}
+/* Minimum Number Erroe Message*/
+#telephoneinput-3b60292ca3-description{
+    margin-top: -17px;
+    width: max-content;
+    margin-left: 50px;
+}
+
+
+.field-otp-input input[type="text"]::placeholder
+{
+    text-align: start;
+    letter-spacing: 25px;
+   font-size: 60px;
+}
+.section.fragment-container .field-country-mobile-panel .field-mobilenumber input[type="text"]::placeholder{
+    font-size: 1rem;
+    letter-spacing: 0;
+}
+
+#dropdown-2a01ff1480{
+    border-right: none;
+    height: 53.2px;
+    width: 72px;
+    border-radius: 0;
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+
+#dropdown-b6e496eb02-description p{
+    width: max-content;
+}
+#dropdown-2a01ff1480-description p{
+    font-size: 1.1rem;
+}
+.field-country-mobile-panel .field-panel-radio-button,
+.panel-wrapper.field-source-of-panel.field-wrapper.col-4
+{
+    display: block !important;
+}
+.panel-wrapper.field-panel-radio-button.field-wrapper.col-4{
+    margin-left: 25px;
+}
+
+.form.block .date-wrapper.field-dob.field-wrapper.col-3 input,
+.form.block .field-pan-card input
+
+{
+    width: 350px;
+    height: 50px;
+    border-radius: 0;
+    padding: 25px;
+    border-radius: 14px;
+}
+
+.form.block .field-label{
+    font-family: var(--form-label-color);
+    font-weight: normal;
+}
+
+.field-income-notice-text{
+    border: 2px solid #e3901c;
+    border-radius: 14px;
+    background-color: #fdf9f6;
+
+}
+.field-income-notice-text p{
+    font-size: 15.6px !important;
+    color: orange !important;
+    margin: 0 !important;
+    padding: 4px;
+    line-height: 20px;
+}
+.section.fragment-container.columns-container .fragment-wrapper{
+    margin-bottom: 35px;
+}
+button[type="submit"]{
+    border-radius: 16px !important;
+    margin: 0;
+}
+ button[type="submit"]::after{
+   content: ">";
+   padding-left: 25px;
+}
+
+.fragment.block.form-container .form-wrapper{
+    padding-bottom: 10px;
+}
+.field-privacy-policy,
+.field-privacy-policy *
+{
+    margin: 0 !important;
+}
+.field-otp-input,
+.field-otp-input *{
+    margin: 0 !important;
+}
+.field-resend-otp-panel,
+.field-resend-otp-panel *
+{
+    margin: 0 !important;
+}
+.field-form-submit-button1771495480417 button{
+    margin-top: 25px;
+}
+.range-bubble
+{
+    display: none !important;
+}
+
+.field-loan-amount-range .range-widget-wrapper,
+.field-loan-tenure-range .range-widget-wrapper
+{
+    padding-top: 36px;
+}
+.field-emi-and-loan-tenure-panel label{
+    color: black !important;
+    font-weight: bolder !important;
+}
+#textinput-b5c2e5c1b9{
+    letter-spacing: 5px;
+}
+.field-tenure-hidden-input-1 {
+    display: none;
+}
+.field-rate-of-interst-input-1{
+    display: none;
+}
+
+/* End of the OTP login and other css */
+
   header{
     display: none;
   }
-
   main .form-wrapper:first-of-type{
     padding-top: 0px;
   }
@@ -151,5 +328,42 @@ main .form.block .field-right-side-panel img{
   width: 300px;
   border-radius: 16px;
 }
+
+main .form.block .field-main-panel-in-offers{
+  position: relative;
+  top:-10%;
+}
+main .form.block .field-main-panel-in-offers .field-personalized-loan-offer-text p,
+main .form.block .field-main-panel-in-offers .field-blue-color-container-dynamic-panel
+{
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+main .form.block .field-loan-amount-tenure-panel{
+  width: max-content;
+}
+main .form.block .field-loan-amount-tenure-panel p{
+  color: black;
+}
+main .form.block .field-main-panel-in-offers .field-overall-amount-in-body{
+  pointer-events: none;
+}
+
+main .form.block .field-main-panel-in-offers .field-proceed-button button{
+background-color: rgb(27, 27, 184);
+border-radius: 16px;
+width: 30%;
+}
+main .form.block .field-main-panel-in-offers .field-proceed-button button::after{
+  content: '>';
+  text-align: end;
+}
+main .form.block .field-plain-text1771676247795{
+  position: relative;
+  top: -2px;
+}
+
+
 
 }

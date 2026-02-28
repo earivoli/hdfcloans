@@ -246,28 +246,6 @@ function dateToDaysSinceEpoch(date) {
 
 /**
  * Custom submit function
- * @name concatWithLoanAmount
- * @param {string} text
- * @param {number} loan
- */
-function concatWithLoanAmount(text,loan){
-  console.log(text,loan);
-  return text + loan;
-}
-
-/**
- * Custom submit function
- * @name rangeAmountSet
- * @param {object} fieldName
- * @param {number} text
- * @param {number} loan
- * @param {scope} globals
- */
-
-
-
-/**
- * Custom submit function
  * @name saveToSession
  * @param {object} fieldName
  * @param {number} value
@@ -278,17 +256,6 @@ function saveToSession(fieldName,value){
   console.log("Session Saving values",fieldName._data.$_name)
   sessionStorage.removeItem("fieldName._data.$_name")
   sessionStorage.setItem(fieldName._data.$_name,value)
-}
-
-/**
- * Custom submit function
- * @name saveToSession
- * @param {object} fieldName
- * @param {scope} globals
- */
-function setFormDatatoSession(fieldName){
-  //sma
- console.log("field::-",fieldName);
 }
 
 function calculateEMI(principal,rateofinterst,numberofmonths){
@@ -303,6 +270,9 @@ function calculateEMI(principal,rateofinterst,numberofmonths){
 }
 
 function returnFullCustName(fName,Lname){
+  if(!fName && !Lname){
+    return '';
+  }
   const fullName = String(fName)+ " " +String(Lname);
   console.log("Full Name is",fullName)
   return fullName;
@@ -310,21 +280,13 @@ function returnFullCustName(fName,Lname){
 
 // main --file
 function returnFullAddress(address1,address2,address3,state,city,zip){
-  const fullAddress = String(address1) + " " + String(address2) + " " + String(address3) + " " + String(state) + " " + String(zip);
+  const fullAddress = String(address1) + "," + String(address2) + "," + String(address3) + " " + String(state) + "," + String(zip);
   console.log("Full Address is ",fullAddress);
   return fullAddress;
 }
 
 
-/*
- * Custom submit function
- * @name combineMobileWithCountryCode
- * @param {number} code
- * @param {object} mobile
- */
-function combineMobileWithCountryCode(code,mobile){
-  console.log("country + mobile",code,mobile)
-}
+
 
 /**
  * Custom submit function
@@ -376,14 +338,18 @@ function maskMobileNumber(mobileNumber) {
 }
 
 function validateOTP(otp){
-  console.log("OTP",otp.length,otp)
+  if(!otp){
+    return false;
+  }
   if(otp.length==6){
     return true;
   }
   return false;
 }
 function validatePhoneNumber(phone){
-  console.log("Value",phone);
+  if(!phone){
+    return false;
+  }
   if(phone.length == 10){
     return true;
   }else{
@@ -392,6 +358,9 @@ function validatePhoneNumber(phone){
 }
 
 function validatePAN(pan){
+  if(!pan){
+    return false;
+  }
   const number = String(pan).toUpperCase();
   const regexTest = /^[A-Z]{3}P[A-Z][0-9]{4}[A-Z]$/;
   return regexTest.test(number);
@@ -415,8 +384,6 @@ export {
   returnFullAddress,
   maskMobileNumber,
   rangeAmountSet,
-  setFormDatatoSession,
-  combineMobileWithCountryCode,
   validateOTP,
   validatePhoneNumber,
   validatePAN
