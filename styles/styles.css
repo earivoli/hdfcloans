@@ -355,7 +355,8 @@ input[type="range"]{
 .field-card-panel .field-card-secondary-panel{
   background-color: #FFF8E1;
   margin-left: 18% !important;
-  border-radius: 16px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
   box-sizing: border-box;
   overflow: hidden;
   padding: 16px !important;
