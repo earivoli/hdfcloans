@@ -1,3 +1,8 @@
+
+:root{
+    --hdfc-header-footer: #001D4A;
+  --hdfc-button-color:#1E40E6;
+}
 @media (min-width: 1024px) {
 
 
@@ -268,10 +273,314 @@ button[type="submit"]{
  main .form.block form .plain-text-wrapper.field-plain-text1771495264010 *{
   margin: 0;
 }
-main .form.block .field-card-panel{
-  border: 2px rgb(127, 203, 203) ;
-  background-color: white;
+
+
+main .form.block .field-main-panel-in-offers{
+  position: relative;
+  top:-10%;
 }
+main .form.block .field-main-panel-in-offers .field-personalized-loan-offer-text p,
+main .form.block .field-main-panel-in-offers .field-blue-color-container-dynamic-panel
+{
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+main .form.block .field-loan-amount-tenure-panel{
+  width: max-content;
+}
+main .form.block .field-loan-amount-tenure-panel p{
+  color: black;
+}
+main .form.block .field-main-panel-in-offers .field-overall-amount-in-body{
+  pointer-events: none;
+}
+
+main .form.block .field-main-panel-in-offers .field-proceed-button button{
+background-color: rgb(27, 27, 184);
+border-radius: 16px;
+width: 30%;
+}
+main .form.block .field-main-panel-in-offers .field-proceed-button button::after{
+  content: '>';
+  text-align: end;
+}
+main .form.block .field-plain-text1771676247795{
+  position: relative;
+  top: -2px;
+}
+
+
+/* HDFC offerpage css */
+.field-personalized-loan-offer-text,
+.field-personalized-loan-offer-text *
+{
+  margin: 0;
+}
+.pl-offers-page .field-personalized-loan-offer-text  p p{
+  font-size: 1.6rem !important;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: black;
+  letter-spacing: 0.1px;
+}
+.field-loan-amount-text-input input,
+.field-blue-color-container-dynamic-panel input,
+.field-amount-in-card-inr input,
+.field-emi-amount-input input,
+.field-roi-amount-input input
+{
+  border: none !important;
+  pointer-events: none !important;
+  outline: none !important;
+}
+.field-blue-color-container-dynamic-panel {
+  background-color: #EAFcFE ;
+  border-radius: 16px;
+  height: auto;
+  padding: 15px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+.field-loan-amount-text-input{
+  width: 35%;
+}
+.field-blue-color-container-dynamic-panel input{
+    background-color: #EAFcFE  !important;
+    color: black !important;
+    font-size: 1.2rem !important;
+    font-family: sans-serif;
+}
+.field-blue-color-container-dynamic-panel .field-form-image1771683660126{
+  width: 80px;
+  margin-left: 20px !important;
+}
+.field-loan-amount-tenure-panel p p{
+  font-size: 1.2rem  !important;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: black;
+}
+.field-slider-and-loan-panel,
+.field-emi-tenure-panel
+{
+  display: flex !important;
+  flex-direction: column !important;
+}
+.field-slider-and-loan-panel label{
+  font-weight: bold !important;
+}
+.field-overall-amount-in-body,
+.field-emi-tenure-input
+{
+  width: 30%;
+  align-self:flex-end;
+  position: relative;
+  top: 60px;
+}
+.field-overall-amount-in-body *{
+  margin-bottom: 0 !important;
+}
+.field-overall-amount-in-body input,
+.field-emi-tenure-input input
+{
+  border: 2px solid gray !important;
+  height: 50px !important;
+  border-radius: 0 !important;
+  font-size: 1.1rem !important;
+  /* padding: 25px !important; */
+  border-radius: 14px !important;
+  font-weight: bold !important;
+  text-align: center;
+  
+}
+input[type="range"]{
+  height: 10px !important;
+  background-image: linear-gradient(to right, #e47c04 calc(100% * var(--current-steps) / var(--total-steps)), #C5C5C5 calc(100% * var(--current-steps) / var(--total-steps))) !important;
+}
+.field-min-amount,
+.field-max-amount{
+  display: none;
+}
+
+.field-card-panel .field-card-secondary-panel{
+  background-color: #FFF8E1;
+  margin-left: 18% !important;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 16px !important;
+}
+.field-avail-text p,
+.field-amount-in-card-inr input
+{
+  font-size: 1.6rem !important;
+  color: black !important;
+  font-weight: bolder !important;
+  margin: 0 !important;
+  background-color:#FFF8E1 !important; ;
+  padding: 0 !important;
+}
+.field-amount-in-card-inr{
+  margin: 0 !important;
+   margin-bottom: 20px !important;
+  width: 95%;
+  position: relative !important;
+
+}
+.field-amount-in-card-inr::after{
+  content: "" !important;
+  letter-spacing: 2px;
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 65% !important;
+  border-bottom: 2px dotted gray;
+  bottom: -12px !important;
+}
+.field-amount-in-card-inr input{
+  font-size: 3.5rem !important;
+  width: 90% !important;
+  height: 60px !important;
+}
+.field-plain-text1771676247795{
+  background-color: #f29a2e;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+.field-plain-text1771676247795 p{
+  margin: 0 !important;
+  color: white !important;
+  padding: 10px;
+  padding-left: 8px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+.field-emi-roi-seprate-panel,
+.field-tax-panel,
+.field-card-3nd-sub-panel
+{
+  border-left: 5px solid #f29a2e !important;
+}
+
+.field-emi-amount input,
+.field-tax-panel input,
+.field-card-3nd-sub-panel input
+{
+  border: none !important;
+  background-color: #FFF8E1 !important;
+  font-size: 1.3rem !important;
+  color: #131313 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.field-emi-amount,
+.field-taxes-input
+{
+  margin-left: 25px !important;
+}
+.field-tax-panel,
+.field-roi-amount-input
+{
+  margin-right: 0 !important;
+}
+.field-plain-text1771676247795{
+  margin-left: 18% !important;
+  width: 100% !important;
+  margin-top: 0 !important;
+  padding-bottom: 0 !important;
+  height: auto !important;
+  height: 85px !important;
+}
+.field-card-secondary-panel,
+.field-card-secondary-panel *
+ {
+  margin-bottom: 0 !important;
+}
+.field-card-2nd-sub-panel{
+  margin-left: 0 !important;
+}
+
+
+/* hidden inputs */
+
+.field-tenure-hidden-input,
+.field-rate-of-interst-input
+{
+  display: none;
+}
+
+
+
+/* Review Page*/
+form .field-review-details-fragment-on-page .field-review-details-text p p:nth-of-type(1){
+  font-size: 1.6rem;
+  color: black;
+  margin-bottom: 0;
+}
+form .field-review-details-fragment-on-page .field-review-details-text p p:nth-of-type(2){
+  font-size: 1.0rem;
+}
+main .form form .field-review-page .field-review-fragment legend{
+  color: black;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+main .form form .field-main-panel-for-accordion input{
+  pointer-events: none;
+  border: none;
+}
+main .form form .field-main-panel-for-accordion .text-wrapper{
+  width: auto;
+  border-left: 3px solid blue;
+  height: 78px;
+}
+main .form form .field-main-panel-for-accordion input{
+  color: black;
+  font-weight: bold;
+}
+
+main .form.block .field-review-page {
+  position: relative;
+  top: -15%;
+}
+main .form.block .field-review-page .field-review-details-text p p:first-of-type{
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+main .form.block .field-review-page .field-review-details-text p p:nth-of-type(2){
+  color: black;
+}
+
+main .form.block button {
+  background-color: var(--hdfc-button-color);
+  border-radius: 16px;
+  width: 30%;
+}
+
+/* End of Review Page */
+
+/* Thankyou Page */
+
+main .form.block .field-card-panel{
+  border: 2px solid rgb(197 204 204);
+  background-color: white;
+  border-radius: 16px;
+  padding-left: 3%;
+}
+
+main .form.block .field-thankyou-page{
+  box-sizing: border-box;
+  position: relative;
+  top: -18%;
+}
+
 main .form.block form .field-loan-application-input{
   margin-bottom: 0;
   margin-top: 12%;
@@ -328,42 +637,12 @@ main .form.block .field-right-side-panel img{
   width: 300px;
   border-radius: 16px;
 }
-
-main .form.block .field-main-panel-in-offers{
-  position: relative;
-  top:-10%;
+main .form.block .field-subsciption-text {
+  height: 10px;
+  margin: 0;
 }
-main .form.block .field-main-panel-in-offers .field-personalized-loan-offer-text p,
-main .form.block .field-main-panel-in-offers .field-blue-color-container-dynamic-panel
-{
-  color: black;
-  font-size: 1.2rem;
-  font-weight: bold;
+main .form.block .field-subsciption-text p{
+  margin: 0;
 }
-main .form.block .field-loan-amount-tenure-panel{
-  width: max-content;
-}
-main .form.block .field-loan-amount-tenure-panel p{
-  color: black;
-}
-main .form.block .field-main-panel-in-offers .field-overall-amount-in-body{
-  pointer-events: none;
-}
-
-main .form.block .field-main-panel-in-offers .field-proceed-button button{
-background-color: rgb(27, 27, 184);
-border-radius: 16px;
-width: 30%;
-}
-main .form.block .field-main-panel-in-offers .field-proceed-button button::after{
-  content: '>';
-  text-align: end;
-}
-main .form.block .field-plain-text1771676247795{
-  position: relative;
-  top: -2px;
-}
-
-
 
 }

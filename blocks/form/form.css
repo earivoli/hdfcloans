@@ -802,13 +802,3 @@ main div.form-wrapper {
 main .form form select[multiple] {
     height: calc(42px + 50px);
 }
-
-/* custom styles for Capstone */
-
-
-
-
-main .form.block form{
-    gap:12px !important;
-}
-
