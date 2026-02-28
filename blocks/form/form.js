@@ -506,10 +506,10 @@ function loadFormCustomStyles(formDef) {
   }
 }
 
-function waitForSessionValue(callback,max=30,interval=500){
+function waitForSessionValue(callback,sessionVarName,max=30,interval=500){
   let attempts = 0;
   const poll = setInterval(()=>{
-    const value = sessionStorage.getItem("offerAmount");
+    const value = sessionStorage.getItem(sessionVarName);
     ++attempts;
     if(value!==null && value !=undefined){
         clearInterval(poll);
@@ -537,34 +537,19 @@ function waitForSessionValue(callback,max=30,interval=500){
     waitForSessionValue((amount)=>{
       offerAmount = amount;
       sliderToupdate(amountRangeSlider,50000,offerAmount);
-    })
-    console.log("offerAmount is from the session",offerAmount,typeof(offerAmount))
-    amountRangeSlider.addEventListener("input",function(){
-          const amountInput =  form.querySelector('.field-slider-and-loan-panel .field-overall-amount-in-body input');
-          if(amountInput){
-            const amountTodestination = form.querySelector('.field-loan-amount-range .range-bubble')
-            amountInput.value = amountTodestination.innerText;
-            console.log("Reached Here")
-            amountInput.dispatchEvent(new Event("input",{bubbles:true}))
-            amountInput.dispatchEvent(new Event("change",{bubbles:true}))
-          }
-      })
+    },
+    "Overall_Amount_In_body"
+  )
+    waitForSessionValue((tenureTemp)=>{
+      tenure = tenureTemp;
+      sliderToupdate(tenureRangeSlider,12,tenure);
+
+    },
+    "emi_tenure_input"
+  )
+    
     }
-    if(tenureRangeSlider){
-    sliderToupdate(tenureRangeSlider,12,tenure);
-      tenureRangeSlider.addEventListener("input",function(){
-          const tenureInput =  form.querySelector('.field-emi-tenure-panel .field-emi-tenure-input input');
-          const hiddenInput = form.querySelector('.field-hiddeninputoftenure input')
-          if(tenureInput && hiddenInput){
-            const amountTodestination = form.querySelector('.field-loan-tenure-range .range-bubble');
-            console.log(amountTodestination)
-            tenureInput.value = amountTodestination.innerText + " Months";
-            hiddenInput.value = amountTodestination.innerText;
-            hiddenInput.dispatchEvent(new Event("input",{bubbles:true}))
-            hiddenInput.dispatchEvent(new Event("change",{bubbles:true}))
-          }
-      })
-    }
+    
       
 
     //thankyou page
