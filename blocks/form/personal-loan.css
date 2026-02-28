@@ -568,7 +568,7 @@ main .form.block button {
 
 /* Thankyou Page */
 
-main .form.block .field-card-panel{
+main .form.block .field-thnakyou-fragment .field-main-panel .field-card-panel{
   border: 2px solid rgb(197 204 204);
   background-color: white;
   border-radius: 16px;
