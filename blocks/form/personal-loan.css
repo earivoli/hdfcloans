@@ -573,6 +573,7 @@ main .form.block .field-thnakyou-fragment .field-main-panel .field-card-panel{
   background-color: white;
   border-radius: 16px;
   padding-left: 3%;
+  height: 435px;
 }
 
 main .form.block .field-thankyou-page{
@@ -595,11 +596,12 @@ main .form.block form .field-loan-application-input input{
   padding-left: 0;
 }
 main .form.block form .field-plain-text1771837437953{
-  height: 135px;
+  height: 10px;
 }
 main .form.block .field-sub-card-panel-2 {
   border-top:2px dotted grey;
   padding-top: 2%;
+  width: 90%;
 }
 main .form.block .field-sub-card-panel-2 p {
   font-size: 1.4rem;
@@ -612,9 +614,11 @@ main .form.block .field-loan-amount-input input{
   border: none;
   font-weight: bold;
   color: black;
+  margin: 0;
+  padding: 0;
 }
 main .form.block .field-loan-amount-input {
-  border-left: 2px solid blue;
+  border-left: 5px solid rgb(17, 193, 246);
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   padding-left: 5%;
@@ -632,9 +636,13 @@ main .form.block .field-blue-panel p{
   font-size: 1rem;
 }
 
+main .form.block .field-right-side-panel{
+  position: relative;
+  top: -20%;
+}
 main .form.block .field-right-side-panel img{
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 239px;
   border-radius: 16px;
 }
 main .form.block .field-subsciption-text {
@@ -644,5 +652,14 @@ main .form.block .field-subsciption-text {
 main .form.block .field-subsciption-text p{
   margin: 0;
 }
+main .form.block .field-thankyou-page .field-sub-card-panel-2{
+  height: 100px;
+}
 
+main .form.block .field-thankyou-page .field-loan-amount-input{
+  height: 80px;
+}
+main .form.block .field-thankyou-page .field-panel11771838411824 legend{
+  pointer-events: none;
+}
 }
