@@ -1,3 +1,5 @@
+import console from "node:console";
+
 /**
  * Get Full Name
  * @name getFullName Concats first name and last name
@@ -180,5 +182,17 @@ function validatePAN(pan){
   return regexTest.test(number);
 }
 
+function returnAsINRAmount(amount){
+  if(!amount){
+    return ''
+  }
+  const formatted = amount.toLocaleString("en-IN",{
+    style : "currency",
+    currency:"INR"
+  });
+  console.log("Formateed String",formatted);
+  return formatted;
+}
+
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,maskMobileNumber,rangeAmountSet,setFormDatatoSession,combineMobileWithCountryCode,validateOTP,validatePhoneNumber,validatePAN};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,maskMobileNumber,rangeAmountSet,setFormDatatoSession,combineMobileWithCountryCode,validateOTP,validatePhoneNumber,validatePAN,returnAsINRAmount};

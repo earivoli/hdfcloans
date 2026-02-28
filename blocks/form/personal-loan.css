@@ -88,10 +88,10 @@
 #dropdown-2a01ff1480-description p{
     font-size: 1.1rem;
 }
-.field-country-mobile-panel .field-panel-radio-button,
-.panel-wrapper.field-source-of-panel.field-wrapper.col-4
+main .form.block .field-country-mobile-panel .field-panel-radio-button,
+main .form.block .panel-wrapper.field-source-of-panel.field-wrapper.col-4
 {
-    display: block !important;
+    display: block;
 }
 .panel-wrapper.field-panel-radio-button.field-wrapper.col-4{
     margin-left: 25px;
@@ -119,20 +119,17 @@
     background-color: #fdf9f6;
 
 }
-.field-income-notice-text p{
-    font-size: 15.6px !important;
-    color: orange !important;
-    margin: 0 !important;
+main .form.block .field-income-notice-text p{
+    font-size: 15.6px;
+    color: orange;
+    margin: 0;
     padding: 4px;
     line-height: 20px;
 }
 .section.fragment-container.columns-container .fragment-wrapper{
     margin-bottom: 35px;
 }
-button[type="submit"]{
-    border-radius: 16px !important;
-    margin: 0;
-}
+
  button[type="submit"]::after{
    content: ">";
    padding-left: 25px;
@@ -141,26 +138,26 @@ button[type="submit"]{
 .fragment.block.form-container .form-wrapper{
     padding-bottom: 10px;
 }
-.field-privacy-policy,
-.field-privacy-policy *
+main .form.block .field-otp-panel .field-privacy-policy,
+main .form.block .field-otp-panel .field-privacy-policy,*
 {
-    margin: 0 !important;
+    margin: 0;
 }
-.field-otp-input,
-.field-otp-input *{
-    margin: 0 !important;
+main .form.block .field-otp-panel .field-otp-input,
+main .form.block .field-otp-panel .field-otp-input *{
+    margin: 0;
 }
-.field-resend-otp-panel,
-.field-resend-otp-panel *
+main .form.block .field-otp-panel .field-resend-otp-panel,
+main .form.block .field-otp-panel *
 {
-    margin: 0 !important;
+    margin: 0;
 }
 .field-form-submit-button1771495480417 button{
     margin-top: 25px;
 }
-.range-bubble
+main .form.block .field-emi-and-loan-tenure-panel .range-bubble
 {
-    display: none !important;
+    display: none;
 }
 
 .field-loan-amount-range .range-widget-wrapper,
@@ -168,9 +165,9 @@ button[type="submit"]{
 {
     padding-top: 36px;
 }
-.field-emi-and-loan-tenure-panel label{
-    color: black !important;
-    font-weight: bolder !important;
+main .form.block .field-emi-and-loan-tenure-panel  label{
+    color: black;
+    font-weight: bolder;
 }
 #textinput-b5c2e5c1b9{
     letter-spacing: 5px;
@@ -195,7 +192,7 @@ button[type="submit"]{
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    background: #5B4BDF;
+    background: var(--hdfc-header-footer);
     padding: 16px 32px;
     border-radius: 10px;
     box-shadow: 0 4px 14px rgba(16, 24, 40, 0.08);
@@ -332,58 +329,54 @@ main .form.block .field-plain-text1771676247795{
   margin: 0;
 }
 .pl-offers-page .field-personalized-loan-offer-text  p p{
-  font-size: 1.6rem !important;
+  font-size: 1.6rem;
   font-weight: bold;
   font-family: sans-serif;
   color: black;
   letter-spacing: 0.1px;
 }
-.field-loan-amount-text-input input,
-.field-blue-color-container-dynamic-panel input,
-.field-amount-in-card-inr input,
-.field-emi-amount-input input,
-.field-roi-amount-input input
+main .form.block .field-offers-page input[type="text"]
 {
-  border: none !important;
-  pointer-events: none !important;
-  outline: none !important;
+  border: none;
+  pointer-events: none;
+  outline: none;
 }
-.field-blue-color-container-dynamic-panel {
+main .form.block .field-blue-color-container-dynamic-panel {
   background-color: #EAFcFE ;
   border-radius: 16px;
   height: auto;
   padding: 15px;
-  display: flex !important;
-  align-items: center !important;
-  gap: 0 !important;
+  display: flex;
+  align-items: center;
+  gap: 0;
 }
 .field-loan-amount-text-input{
   width: 35%;
 }
-.field-blue-color-container-dynamic-panel input{
-    background-color: #EAFcFE  !important;
-    color: black !important;
-    font-size: 1.2rem !important;
+main .form.block .field-blue-color-container-dynamic-panel input{
+    background-color: #EAFcFE ;
+    color: black;
+    font-size: 1.2rem;
     font-family: sans-serif;
 }
-.field-blue-color-container-dynamic-panel .field-form-image1771683660126{
+main .form.block .field-blue-color-container-dynamic-panel .field-form-image1771683660126{
   width: 80px;
-  margin-left: 20px !important;
+  margin-left: 20px;
 }
-.field-loan-amount-tenure-panel p p{
-  font-size: 1.2rem  !important;
+main .form.block .field-loan-amount-tenure-panel p p{
+  font-size: 1.2rem;
   font-family: sans-serif;
   font-weight: bold;
   color: black;
 }
-.field-slider-and-loan-panel,
-.field-emi-tenure-panel
+main .form.block .field-slider-and-loan-panel,
+main .form.block .field-emi-tenure-panel
 {
-  display: flex !important;
-  flex-direction: column !important;
+  display: flex;
+  flex-direction: column;
 }
-.field-slider-and-loan-panel label{
-  font-weight: bold !important;
+main .form.block .field-slider-and-loan-panel label{
+  font-weight: bold;
 }
 .field-overall-amount-in-body,
 .field-emi-tenure-input
@@ -393,131 +386,132 @@ main .form.block .field-plain-text1771676247795{
   position: relative;
   top: 60px;
 }
-.field-overall-amount-in-body *{
-  margin-bottom: 0 !important;
+.main .form.block .field-overall-amount-in-body *{
+  margin-bottom: 0;
 }
-.field-overall-amount-in-body input,
-.field-emi-tenure-input input
+main .form.block .field-overall-amount-in-body input,
+main .form.block .field-emi-tenure-input input
 {
-  border: 2px solid gray !important;
-  height: 50px !important;
-  border-radius: 0 !important;
-  font-size: 1.1rem !important;
-  /* padding: 25px !important; */
-  border-radius: 14px !important;
-  font-weight: bold !important;
+  border: 2px solid gray;
+  height: 50px;
+  border-radius: 0;
+  font-size: 1.1rem;
+  border-radius: 14px;
+  font-weight: bold;
   text-align: center;
   
 }
-input[type="range"]{
-  height: 10px !important;
-  background-image: linear-gradient(to right, #e47c04 calc(100% * var(--current-steps) / var(--total-steps)), #C5C5C5 calc(100% * var(--current-steps) / var(--total-steps))) !important;
+main .form.block .field-offers-page .field-loan-amount-range input[type="range"],
+main .form.block .field-offers-page  .field-loan-tenure-range input[type="range"]
+{
+  height: 10px;
+  background-image: linear-gradient(to right, #e47c04 calc(100% * var(--current-steps) / var(--total-steps)), #C5C5C5 calc(100% * var(--current-steps) / var(--total-steps)));
 }
 .field-min-amount,
 .field-max-amount{
   display: none;
 }
 
-.field-card-panel .field-card-secondary-panel{
+main .form.block .field-card-panel .field-card-secondary-panel{
   background-color: #FFF8E1;
-  margin-left: 18% !important;
+  margin-left: 18%;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   box-sizing: border-box;
   overflow: hidden;
-  padding: 16px !important;
+  padding: 16px;
 }
-.field-avail-text p,
-.field-amount-in-card-inr input
+main .form.block .field-avail-text p,
+main .form.block .field-amount-in-card-inr input
 {
-  font-size: 1.6rem !important;
-  color: black !important;
-  font-weight: bolder !important;
-  margin: 0 !important;
-  background-color:#FFF8E1 !important; ;
-  padding: 0 !important;
+  font-size: 1.6rem;
+  color: black;
+  font-weight: bolder;
+  margin: 0;
+  background-color:#FFF8E1;
+  padding: 0;
 }
-.field-amount-in-card-inr{
-  margin: 0 !important;
-   margin-bottom: 20px !important;
+main .form.block .field-amount-in-card-inr{
+  margin: 0;
+   margin-bottom: 20px;
   width: 95%;
-  position: relative !important;
+  position: relative;
 
 }
-.field-amount-in-card-inr::after{
-  content: "" !important;
+.main .form.block .field-amount-in-card-inr::after{
+  content: "";
   letter-spacing: 2px;
-  position: absolute !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: 65% !important;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65%;
   border-bottom: 2px dotted gray;
-  bottom: -12px !important;
+  bottom: -12px;
 }
-.field-amount-in-card-inr input{
-  font-size: 3.5rem !important;
-  width: 90% !important;
-  height: 60px !important;
+main .form.block .field-amount-in-card-inr input{
+  font-size: 3.5rem;
+  width: 90%;
+  height: 60px;
 }
 .field-plain-text1771676247795{
   background-color: #f29a2e;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
 }
-.field-plain-text1771676247795 p{
-  margin: 0 !important;
-  color: white !important;
+main .form.block .field-plain-text1771676247795 p{
+  margin: 0;
+  color: white;
   padding: 10px;
   padding-left: 8px;
 }
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button{
-  -webkit-appearance: none !important;
-  margin: 0 !important;
+main .form.block input[type="number"]::-webkit-inner-spin-button,
+main .form.block input[type="number"]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
 }
-.field-emi-roi-seprate-panel,
-.field-tax-panel,
-.field-card-3nd-sub-panel
+main .form.block .field-emi-roi-seprate-panel,
+main .form.block .field-tax-panel,
+main .form.block .field-card-3nd-sub-panel
 {
-  border-left: 5px solid #f29a2e !important;
+  border-left: 5px solid #f29a2e;
 }
 
-.field-emi-amount input,
-.field-tax-panel input,
-.field-card-3nd-sub-panel input
+main .form.block .field-emi-amount input,
+main .form.block .field-tax-panel input,
+main .form.block .field-card-3nd-sub-panel input
 {
-  border: none !important;
-  background-color: #FFF8E1 !important;
-  font-size: 1.3rem !important;
-  color: #131313 !important;
-  padding: 0 !important;
-  margin: 0 !important;
+  border: none;
+  background-color: #FFF8E1;
+  font-size: 1.3rem;
+  color: #131313;
+  padding: 0;
+  margin: 0;
 }
-.field-emi-amount,
-.field-taxes-input
+main .form.block .field-emi-amount,
+main .form.block .field-taxes-input
 {
-  margin-left: 25px !important;
+  margin-left: 25px;
 }
-.field-tax-panel,
-.field-roi-amount-input
+main .form.block .field-tax-panel,
+main .form.block .field-roi-amount-input
 {
-  margin-right: 0 !important;
+  margin-right: 0;
 }
-.field-plain-text1771676247795{
-  margin-left: 18% !important;
-  width: 100% !important;
-  margin-top: 0 !important;
-  padding-bottom: 0 !important;
-  height: auto !important;
-  height: 85px !important;
+main .form.block .field-plain-text1771676247795{
+  margin-left: 18%;
+  width: 100%;
+  margin-top: 0;
+  padding-bottom: 0;
+  height: auto;
+  height: 85px;
 }
-.field-card-secondary-panel,
-.field-card-secondary-panel *
+main .form.block .field-card-secondary-panel,
+main .form.block .field-card-secondary-panel *
  {
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
 }
-.field-card-2nd-sub-panel{
-  margin-left: 0 !important;
+main .form.block .field-card-2nd-sub-panel{
+  margin-left: 0;
 }
 
 
