@@ -276,6 +276,10 @@ function calculateEMI(principal,rateofinterst,numberofmonths){
   console.log("P",principal);
   console.log("N",numberofmonths);
   console.log("R",rateofinterst)
+    if(typeof principal == "string"){
+      principal = Number(principal.replace(/[₹,]/g,""));
+      console.log("New Principal",principal)
+    }
   const r = rateofinterst / (12 * 100);
   console.log(r)
   const EMI = (principal * r * Math.pow(1 + r ,numberofmonths))/(Math.pow(1+r,numberofmonths)-1);
