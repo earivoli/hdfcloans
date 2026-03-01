@@ -572,11 +572,11 @@ main .form.block .field-review-page .field-review-details-text p p:nth-of-type(2
   color: black;
 }
 
-main .form.block button {
+/* main .form.block button { */
   /* background-color: var(--hdfc-button-color); */
-  border-radius: 16px;
-  width: 30%;
-}
+  /* border-radius: 16px;
+  width: 30%; */
+/* } */
 
 /* End of Review Page */
 
