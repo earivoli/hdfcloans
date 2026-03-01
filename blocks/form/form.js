@@ -506,7 +506,7 @@ function loadFormCustomStyles(formDef) {
   }
 }
 
-function waitForSessionValue(callback,sessionVarName,max=30,interval=500){
+function waitForSessionValue(callback,sessionVarName,max=30,interval=1000){
   let attempts = 0;
   const poll = setInterval(()=>{
     const value = sessionStorage.getItem(sessionVarName);
