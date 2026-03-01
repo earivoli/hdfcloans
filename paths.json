@@ -2,6 +2,7 @@
   "mappings": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "/content/aem-boilerplate/:/"
   ],
   "includes": [
@@ -11,9 +12,12 @@
 =======
     "/content/hdfcloans/:/"
 >>>>>>> 2a49b36 (Update paths.json)
+=======
+    "/content/HDFCLoans/:/"
+>>>>>>> d4acd0d (Update paths.json)
   ],
   "includes": [
-    "/content/hdfcloans",
+    "/content/HDFCLoans",
     "/content/dam/"
 >>>>>>> 3012acf (Initial commit)
   ]
