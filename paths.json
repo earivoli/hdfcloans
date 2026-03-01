@@ -26,7 +26,12 @@
   ],
   "includes": [
     "/content/hdfc",
+<<<<<<< HEAD
     "/content/dam/"
 >>>>>>> 3012acf (Initial commit)
+=======
+    "/content/dam/",
+    "/content/forms"
+>>>>>>> 05456f2 (Update paths.json)
   ]
 }
