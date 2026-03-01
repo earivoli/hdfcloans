@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "/content/aem-boilerplate/:/"
   ],
   "includes": [
@@ -15,9 +16,12 @@
 =======
     "/content/HDFCLoans/:/"
 >>>>>>> d4acd0d (Update paths.json)
+=======
+    "/content/hdfcloans/:/"
+>>>>>>> 80fa7ff (Update paths.json)
   ],
   "includes": [
-    "/content/HDFCLoans",
+    "/content/hdfcloans",
     "/content/dam/"
 >>>>>>> 3012acf (Initial commit)
   ]
