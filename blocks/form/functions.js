@@ -67,9 +67,13 @@ function calculateEMI(principal,rateofinterst,numberofmonths){
   const r = rateofinterst / (12 * 100);
   console.log(r)
   const EMI = (principal * r * Math.pow(1 + r ),numberofmonths)/(Math.pow(1+r,numberofmonths)-1).toFixed(0);
-  console.log("EMI Amount is ", EMI)
-  return EMI;
-
+  const roundOff = EMI.toFixed(0);
+  const formatted = roundOff.toLocaleString("en-IN",{
+    maximumFractionDigits:0,
+    style : "currency",
+    currency:"INR"
+  });
+  return formatted;
 }
 function returnFullCustName(fName,Lname){
   const fullName = String(fName)+ " " +String(Lname);
