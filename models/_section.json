@@ -49,6 +49,10 @@
               {
               "name": "Final Page",
               "value": "final-page-hdfc"
+            },
+            {
+              "name":"footer",
+              "value":"footer-section"
             }
 
           ]
