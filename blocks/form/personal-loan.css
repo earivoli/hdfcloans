@@ -699,4 +699,19 @@ main .form.block .field-thankyou-page .field-loan-amount-input{
 main .form.block .field-thankyou-page .field-panel11771838411824 legend{
   pointer-events: none;
 }
+
+/* Footer*/
+main .fragment-wrapper:last-of-type .form-wrapper .form.block form{
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+}
+main .fragment-wrapper:last-of-type form p p{ 
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+
 }
