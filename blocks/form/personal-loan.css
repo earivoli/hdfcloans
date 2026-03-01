@@ -6,6 +6,29 @@
 @media (min-width: 1024px) {
 
 
+  /* Buttons for Indijuval Pages */
+  main .form.block .field-main-panel button{
+    border-radius: 16px;
+  }
+
+  main .form.block .field-main-panel .field-view-eligibility-button button:enabled,
+  main .form.block .field-main-panel .field-validate-otp button:enabled
+  {
+    background-color: var(--hdfc-header-footer);
+  }
+  main .form.block  .field-main-panel .field-proceed-button.field-wrapper button{
+    background-color: var(--hdfc-header-footer);
+  }
+
+  main .form.block .field-confirm-button button {
+    background-color: var(--hdfc-header-footer);
+    border-radius: 16px;
+  }
+
+  main .form.block .field-main-panel .field-validate-otp{
+    margin-top: 25px;
+  }
+
   /*otp-logincss*/
 
   /* Global Margin Set */
@@ -308,7 +331,7 @@ main .form.block .field-main-panel-in-offers .field-overall-amount-in-body{
 }
 
 main .form.block .field-main-panel-in-offers .field-proceed-button button{
-background-color: rgb(27, 27, 184);
+background-color: var(--hdfc-header-footer);
 border-radius: 16px;
 width: 30%;
 }
