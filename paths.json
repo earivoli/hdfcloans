@@ -31,7 +31,12 @@
 >>>>>>> 3012acf (Initial commit)
 =======
     "/content/dam/",
+<<<<<<< HEAD
     "/content/forms"
 >>>>>>> 05456f2 (Update paths.json)
+=======
+    "/content/forms",
+    "/content/dam/formsanddocuments"
+>>>>>>> 5221512 (Adding image inclusion)
   ]
 }
