@@ -1,15 +1,19 @@
 {
   "mappings": [
 <<<<<<< HEAD
+<<<<<<< HEAD
     "/content/aem-boilerplate/:/"
   ],
   "includes": [
     "/content/aem-boilerplate/"
 =======
     "/:/"
+=======
+    "/content/hdfcloans/:/"
+>>>>>>> 2a49b36 (Update paths.json)
   ],
   "includes": [
-    "/content/",
+    "/content/hdfcloans",
     "/content/dam/"
 >>>>>>> 3012acf (Initial commit)
   ]
