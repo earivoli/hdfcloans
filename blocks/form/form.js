@@ -532,15 +532,16 @@ function waitForSessionValue(callback,sessionVarName,max=30,interval=1000){
     const tenureRangeSlider = form.querySelector(".field-emi-tenure-panel .field-loan-tenure-range .range-widget-wrapper input");
     let offerAmount = 1500000
     let tenure = 84;
-    sessionStorage.removeItem("offerAmount")
+    sessionStorage.removeItem("Overall_Amount_In_body");
+    sessionStorage.removeItem("emi_tenure_input");
     if(amountRangeSlider && tenureRangeSlider){
         waitForSessionValue((amount)=>{
           offerAmount = amount;
-          sliderToupdate(amountRangeSlider,50000,offerAmount);
+          sliderToupdate(amountRangeSlider,50000,offerAmount,offerAmount);
           },"Overall_Amount_In_body")
         waitForSessionValue((tenureTemp)=>{
           tenure = tenureTemp;
-          sliderToupdate(tenureRangeSlider,12,tenure);
+          sliderToupdate(tenureRangeSlider,12,tenure,tenure);
         },"emi_tenure_input")  
     }
     
@@ -570,6 +571,9 @@ function waitForSessionValue(callback,sessionVarName,max=30,interval=1000){
           image1Elementparent.appendChild(imag1);
       }
     /* End of thnakyou */
+
+    /* Thankyou timer */
+  
     }
   });
 
@@ -583,20 +587,23 @@ function waitForSessionValue(callback,sessionVarName,max=30,interval=1000){
   })
 }
 
-function sliderToupdate(rangeSlider,min,max){
-  console.log("Min,max,range",min,max,rangeSlider)
+function sliderToupdate(rangeSlider,min,max,value){
   if(rangeSlider){
-        rangeSlider.max = max;
-        rangeSlider.min = min;
-        rangeSlider.value = max;
+        const NumMin = Number(min);
+        const NumMax = Number(max);
+        const NumVal = Number(value);
+        rangeSlider.max = NumMax;
+        rangeSlider.min = NumMin
+        rangeSlider.value = NumVal;
+        console.log("Min,max,range",min,max,rangeSlider)
         const wrapper = rangeSlider.parentElement;
         console.log(wrapper)
         const rangeMin = wrapper.querySelector(".range-min");
         const rangeMax = wrapper.querySelector(".range-max");
         const rangeBubble = wrapper.querySelector(".range-bubble");
-        rangeMin.innerText = min;
-        rangeMax.innerText = max;
-        rangeBubble.innerText=max;
+        rangeMin.innerText = NumMin;
+        rangeMax.innerText = NumMax;
+        rangeBubble.innerText=NumVal;
         rangeSlider.dispatchEvent(new Event("input",{bubbles:true}))
         rangeSlider.dispatchEvent(new Event("change",{bubbles:true}))
       }

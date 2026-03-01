@@ -284,12 +284,14 @@ function calculateEMI(principal,rateofinterst,numberofmonths){
   console.log(r)
   const EMI = (principal * r * Math.pow(1 + r ,numberofmonths))/(Math.pow(1+r,numberofmonths)-1);
   const roundOff = EMI.toFixed(0);
-  const formatted = roundOff.toLocaleString("en-IN",{
+  const formatted = Number(roundOff).toLocaleString("en-IN",{
     maximumFractionDigits:0,
     style : "currency",
     currency:"INR"
   });
+  console.log("Formatted String is",formatted)
   return formatted;
+
 }
 
 function returnFullCustName(fName,Lname){
@@ -307,6 +309,7 @@ function returnFullAddress(address1,address2,address3,state,city,zip){
   console.log("Full Address is ",fullAddress);
   return fullAddress;
 }
+
 
 
 
@@ -400,7 +403,14 @@ function returnAsINRAmount(amount){
   console.log("Formateed String",formatted);
   return formatted;
 }
-
+function isValidAge(birthYear) {
+  const currentYear = new Date().getFullYear();
+  const age = currentYear - birthYear;
+  if (age < 18) {
+    return false;
+  }
+  return true;
+}
 export {
   externalize,
   validateURL,
@@ -421,5 +431,6 @@ export {
   validateOTP,
   validatePhoneNumber,
   validatePAN,
-  returnAsINRAmount
+  returnAsINRAmount,
+  isValidAge
 };

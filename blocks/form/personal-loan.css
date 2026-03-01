@@ -318,7 +318,7 @@ main .form.block .field-main-panel-in-offers .field-proceed-button button::after
 }
 main .form.block .field-plain-text1771676247795{
   position: relative;
-  top: -2px;
+  top: -9px;
 }
 
 
@@ -517,7 +517,9 @@ main .form.block .field-card-secondary-panel *
 main .form.block .field-card-2nd-sub-panel{
   margin-left: 0;
 }
-
+main .form.block .field-roi-amount-input{
+  margin-left: 20px;
+}
 
 /* hidden inputs */
 

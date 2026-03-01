@@ -202,6 +202,13 @@ function returnAsINRAmount(amount){
   console.log("Formateed String",formatted);
   return formatted;
 }
-
+function isValidAge(birthYear) {
+  const currentYear = new Date().getFullYear();
+  const age = currentYear - birthYear;
+  if (age < 18) {
+    return false;
+  }
+  return true;
+}
 // eslint-disable-next-line import/prefer-default-export
-export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,maskMobileNumber,rangeAmountSet,setFormDatatoSession,combineMobileWithCountryCode,validateOTP,validatePhoneNumber,validatePAN,returnAsINRAmount};
+export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,maskMobileNumber,rangeAmountSet,setFormDatatoSession,combineMobileWithCountryCode,validateOTP,validatePhoneNumber,validatePAN,returnAsINRAmount,isValidAge};
