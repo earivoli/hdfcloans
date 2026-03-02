@@ -373,10 +373,12 @@ function validateOTP(otp){
   return false;
 }
 function validatePhoneNumber(phone){
+  const REGEX_PATTERN = /^[6-9]\d{9}$/;
   if(!phone){
     return false;
   }
-  if(phone.length == 10){
+  if(phone.length == 10 && REGEX_PATTERN.test(phone)){
+    console.log("validated...")
     return true;
   }else{
     return false;
