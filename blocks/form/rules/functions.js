@@ -372,26 +372,26 @@ function validateOTP(otp){
   }
   return false;
 }
-function validatePhoneNumber(phone){
+function validatePhoneNumber(phone,regex){
   const REGEX_PATTERN = /^[6-9]\d{9}$/;
   if(!phone){
     return false;
   }
   console.log("validated...",typeof(phone))
-  if(phone.length == 10 && REGEX_PATTERN.test(phone)){
+  if(phone.length == 10 && regex.test(phone)){
     return true;
   }else{
     return false;
   }
 }
 
-function validatePAN(pan){
+function validatePAN(pan,regex){
   if(!pan){
     return false;
   }
   const number = String(pan).toUpperCase();
   const regexTest = /^[A-Z]{3}P[A-Z][0-9]{4}[A-Z]$/;
-  return regexTest.test(number);
+  return regex.test(number);
 }
 function returnAsINRAmount(amount){
   if(!amount){
