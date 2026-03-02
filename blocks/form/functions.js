@@ -207,6 +207,7 @@ function returnAsINRAmount(amount){
   return formatted;
 }
 function isValidAge(birthYear) {
+  console.log("Birth Year is",birthYear,typeof(birthYear))
   const currentYear = new Date().getFullYear();
   const age = currentYear - birthYear;
   if (age < 18) {
