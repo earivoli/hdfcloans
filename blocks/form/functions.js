@@ -177,8 +177,12 @@ function validateOTP(otp){
   return false;
 }
 function validatePhoneNumber(phone){
-  console.log("Value",phone);
-  if(phone.length == 10){
+  const REGEX_PATTERN = /^[6-9]\d{9}$/;
+  if(!phone){
+    return false;
+  }
+  console.log("validated..",typeof(phone))
+  if(phone.length == 10 && REGEX_PATTERN.test(phone)){
     return true;
   }else{
     return false;

@@ -377,8 +377,8 @@ function validatePhoneNumber(phone){
   if(!phone){
     return false;
   }
+  console.log("validated...",typeof(phone))
   if(phone.length == 10 && REGEX_PATTERN.test(phone)){
-    console.log("validated...")
     return true;
   }else{
     return false;
