@@ -508,7 +508,7 @@ function loadFormCustomStyles(formDef) {
 
 function waitForSessionValue(callback,sessionVarName,max=30,interval=1000){
   let attempts = 0;
-  const poll = setInterval(()=>{
+  const poll = setInterval(() => {
     const value = sessionStorage.getItem(sessionVarName);
     ++attempts;
     if(value!==null && value !=undefined){
@@ -573,6 +573,26 @@ function waitForSessionValue(callback,sessionVarName,max=30,interval=1000){
     /* End of thnakyou */
 
     /* Thankyou timer */
+
+    const headerImage1 = document.querySelectorAll('main .form.block .field-hdfc-header-logo-1st picture source');
+    const headerImage1InIMG = document.querySelector('main .form.block .field-hdfc-header-logo-1st picture img');
+    if(headerImage1 && headerImage1InIMG){
+      headerImage1.forEach(item=>{
+        item.srcset="https://main--hdfcloans--earivoli.aem.live/icons/hdfc/hdfc-bank-logo.svg"
+      })
+      headerImage1InIMG.src = "https://main--hdfcloans--earivoli.aem.live/icons/hdfc/hdfc-bank-logo.svg"
+    }
+
+    const headerImage2 = document.querySelectorAll('main .form.block .field-hdfc-header-logo-2nd picture source');
+    const headerImage2InIMG = document.querySelector('main .form.block .field-hdfc-header-logo-2nd picture img');
+
+     if(headerImage2 && headerImage2InIMG){
+      headerImage2.forEach(item=>{
+        item.srcset="https://main--hdfcloans--earivoli.aem.live/icons/hdfc/hdfc_right_logo.png"
+      })
+      console.log(headerImage2InIMG)
+      headerImage2InIMG.src = "https://main--hdfcloans--earivoli.aem.live/icons/hdfc/hdfc_right_logo.png"
+    }
   
     }
   });
