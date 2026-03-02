@@ -176,22 +176,38 @@ function validateOTP(otp){
   }
   return false;
 }
-function validatePhoneNumber(phone){
+/**
+ * Custom submit function
+ * @name validatePhoneNumber
+ * @param {object} phone
+ * @param {string} regex
+ */
+function validatePhoneNumber(phone,regex){
+  console.log("P",typeof(phone),typeof(regex),regex)
   const REGEX_PATTERN = /^[6-9]\d{9}$/;
   if(!phone){
     return false;
   }
-  console.log("validated..",typeof(phone))
-  if(phone.length == 10 && REGEX_PATTERN.test(phone)){
+    console.log("tested value from Mobile",regex.test(phone))
+  if(phone.length == 10 && regex.test(phone)){
     return true;
   }else{
     return false;
   }
 }
-function validatePAN(pan){
+/**
+ * Custom submit function
+ * @name validatePAN
+ * @param {object} pan
+ * @param {string} regex
+ */
+function validatePAN(pan,regex){
+ console.log("PA",typeof(pan),typeof(regex))
   const number = String(pan).toUpperCase();
-  const regexTest = /^[A-Z]{3}P[A-Z][0-9]{4}[A-Z]$/;
-  return regexTest.test(number);
+  // const regexTest = /^[A-Z]{3}P[A-Z][0-9]{4}[A-Z]$/;
+    console.log("tested value from PAN",regex.test(pan))
+
+  return regex.test(number);
 }
 
 function returnAsINRAmount(amount){
