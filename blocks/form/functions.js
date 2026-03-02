@@ -177,7 +177,7 @@ function validateOTP(otp){
   return false;
 }
 function validatePhoneNumber(phone,regex){
-  console.log("P",typeof(phone),typeof(regex))
+  console.log("P",typeof(phone),typeof(regex),regex)
   const REGEX_PATTERN = /^[6-9]\d{9}$/;
   if(!phone){
     return false;
