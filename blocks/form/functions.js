@@ -176,6 +176,12 @@ function validateOTP(otp){
   }
   return false;
 }
+/**
+ * Custom submit function
+ * @name validatePhoneNumber
+ * @param {object} phone
+ * @param {string} regex
+ */
 function validatePhoneNumber(phone,regex){
   console.log("P",typeof(phone),typeof(regex),regex)
   const REGEX_PATTERN = /^[6-9]\d{9}$/;
@@ -189,6 +195,12 @@ function validatePhoneNumber(phone,regex){
     return false;
   }
 }
+/**
+ * Custom submit function
+ * @name validatePAN
+ * @param {object} pan
+ * @param {string} regex
+ */
 function validatePAN(pan,regex){
  console.log("PA",typeof(pan),typeof(regex))
   const number = String(pan).toUpperCase();
