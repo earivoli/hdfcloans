@@ -31,8 +31,8 @@
           "label": "Style",
           "options": [
             {
-              "name": "Highlight1",
-              "value": "highlight1"
+              "name": "Highlight",
+              "value": "highlight"
             },
             {
               "name": "PL Offers Page",
@@ -54,7 +54,6 @@
               "name":"footer",
               "value":"footer-section"
             }
-
           ]
         }
       ]
