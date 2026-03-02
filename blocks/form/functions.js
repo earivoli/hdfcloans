@@ -208,12 +208,15 @@ function returnAsINRAmount(amount){
 }
 function isValidAge(birthYear) {
   console.log("Birth Year is",birthYear,typeof(birthYear))
+  const Year = parseInt(birthYear.split("-")[0],10)
+  console.log("Year From String",Year);
   const currentYear = new Date().getFullYear();
-  const age = currentYear - birthYear;
-  if (age < 18) {
-    return false;
+  const age = currentYear - Year;
+  if (age >=18 && age<=60) {
+    console.log("PASS")
+    return true;
   }
-  return true;
+  return false;
 }
 // eslint-disable-next-line import/prefer-default-export
 export default{ getFullName, days, submitFormArrayToString,rangeAmountSet,saveToSession,calculateEMI,returnFullCustName,returnFullAddress,maskMobileNumber,rangeAmountSet,setFormDatatoSession,combineMobileWithCountryCode,validateOTP,validatePhoneNumber,validatePAN,returnAsINRAmount,isValidAge};

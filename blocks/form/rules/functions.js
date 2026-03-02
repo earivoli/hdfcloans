@@ -407,12 +407,15 @@ function returnAsINRAmount(amount){
 }
 function isValidAge(birthYear) {
   console.log("Birth Year is",birthYear,typeof(birthYear))
-  const currentYear = new Date().getFullYear();
-  const age = currentYear - birthYear;
-  if (age < 18) {
-    return false;
-  }
-  return true;
+   const Year = parseInt(birthYear.split("-")[0],10)
+   console.log("Year From String",Year);
+   const currentYear = new Date().getFullYear();
+   const age = currentYear - Year;
+   if (age >=18 && age<=60) {
+     console.log("PASS")
+     return true;
+   }
+   return false;
 }
 export {
   externalize,
