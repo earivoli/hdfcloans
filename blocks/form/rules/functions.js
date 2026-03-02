@@ -377,7 +377,7 @@ function validatePhoneNumber(phone,regex){
   if(!phone){
     return false;
   }
-  console.log("validated...",typeof(phone))
+  console.log("tested value from Mobile",regex.test(phone))
   if(phone.length == 10 && regex.test(phone)){
     return true;
   }else{
@@ -391,6 +391,7 @@ function validatePAN(pan,regex){
   }
   const number = String(pan).toUpperCase();
   const regexTest = /^[A-Z]{3}P[A-Z][0-9]{4}[A-Z]$/;
+  console.log("tested value from PAN",regex.test(number))
   return regex.test(number);
 }
 function returnAsINRAmount(amount){
