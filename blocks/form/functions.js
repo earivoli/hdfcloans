@@ -170,11 +170,11 @@ function combineMobileWithCountryCode(code,mobile){
   console.log("country + mobile",code,mobile)
 }
 function validateOTP(otp){
-  console.log("OTP",otp.length,otp)
-  if(otp.length==6){
-    return true;
+   const regex = /^[0-9]{6}$/;
+  if(!otp){
+    return false;
   }
-  return false;
+  return regex.test(otp);
 }
 function validatePhoneNumber(phone){
   const REGEX_PATTERN = /^[6-9]\d{9}$/;

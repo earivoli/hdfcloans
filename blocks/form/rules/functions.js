@@ -364,13 +364,11 @@ function maskMobileNumber(mobileNumber) {
 }
 
 function validateOTP(otp){
+  const regex = /^[0-9]{6}$/;
   if(!otp){
     return false;
   }
-  if(otp.length==6){
-    return true;
-  }
-  return false;
+  return regex.test(otp);
 }
 function validatePhoneNumber(phone){
   const REGEX_PATTERN = /^[6-9]\d{9}$/;
