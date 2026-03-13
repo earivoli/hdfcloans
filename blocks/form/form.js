@@ -5,6 +5,7 @@ import GoogleReCaptcha from './integrations/recaptcha.js';
 import componentDecorator from './mappings.js';
 import { handleSubmit } from './submit.js';
 import DocBasedFormToAF from './transform.js';
+import { BANK_URLS } from './apiendpoint.js';
 import {
   checkValidation,
   createButton,
@@ -595,9 +596,16 @@ function waitForSessionValue(callback,sessionVarName,max=30,interval=1000){
     }
   
     }
+    /* Thankyou Ends*/
+
+    const bu = document.querySelector('.field-verify-me-now button');
+    console.log("E",bu)
+    bu.addEventListener("click",function(e){
+    alert("Hello")
+    })
+
+
   });
-
-
 
   observer.observe(block,{
     attributes:true,
@@ -641,7 +649,6 @@ export default async function decorate(block) {
       }
     }
   })
-
   // const savedstep = block.querySelectorAll('.panel-wrapper')
 
   

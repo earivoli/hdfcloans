@@ -161,8 +161,7 @@ main .form.block .field-income-notice-text p{
 .fragment.block.form-container .form-wrapper{
     padding-bottom: 10px;
 }
-main .form.block .field-otp-panel .field-privacy-policy,
-main .form.block .field-otp-panel .field-privacy-policy,*
+main .form.block .field-otp-panel .field-privacy-policy
 {
     margin: 0;
 }
@@ -778,6 +777,20 @@ main .form.block .field-rde-email p{
   padding-left: 10px;
   padding-right: 10px;
   margin-right: 10px;
+}
+main .form.block .field-pre-review-page button{
+  background-color: var(--hdfc-header-footer);
+}
+
+/* Verify your income*/
+main .form.block .field-verify-account-page{
+  position: relative;
+  top: -17%;
+}
+main .form.block .field-verify-account-page .field-main-panel-in-sv legend{
+   color: #131313;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 }

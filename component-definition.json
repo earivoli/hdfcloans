@@ -684,6 +684,36 @@
               }
             }
           }
+        },
+        {
+          "title": "Custom radio",
+          "id": "custom-radio",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/fd/components/form/radiobutton/v1/radiobutton",
+                "template": {
+                  "jcr:title": "Custom radio",
+                  "fieldType": "radio-group",
+                  "enum": [
+                    "0",
+                    "1"
+                  ],
+                  "enumNames": [
+                    {
+                      "resourceType": "core/fd/components/form/image/v1/image",
+                      "template": {
+                        "jcr:title": "Image",
+                        "fieldType": "image"
+                      }
+                    }
+                  ],
+                  "orientation": "horizontal",
+                  "fd:viewType": "custom-radio"
+                }
+              }
+            }
+          }
         }
       ]
     }
