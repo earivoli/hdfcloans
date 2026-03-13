@@ -720,7 +720,64 @@ main .form.block .field-resendotp button{
     margin-left: -28%;
     border: none;
     padding-left: 0;
+}
 
+main .form.block .field-pre-review-page{
+  position: relative;
+  top: -4%;
+}
+main .form.block .field-rde-customer-details p{
+  color: #131313;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+main .form.block .field-rde-aadhar-input{
+  background-color: #ccfdfd;
+  border-radius: 16px;
+  padding: 20px;
+  border-left: 5px solid violet;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; 
+}
+main .form.block .field-rde-aadhar-input input{
+  pointer-events: none;
+  border: none;
+  background-color:#ccfdfd;
+  padding: 0;
+  margin: 0;
+  color: black;
+  font-weight: bold;
+}
+main .form.block .panel-wrapper .field-rds-accordion-fname legend,
+main .form.block .panel-wrapper .field-rds-accordion-personal-details legend,
+main .form.block .panel-wrapper .field-address-details-prefilled .field-label.accordion-legend,
+main .form.block .panel-wrapper .field-rds-accordion-employer-details legend,
+main .form.block .panel-wrapper .field-form-accordion1772773771152 legend
+{
+  background-color: #c3caed;
+  pointer-events: none;
+  color: #131313;
+  font-weight: bold;
+}
+main .form.block .panel-wrapper .field-rds-accordion-fname legend::after{
+  content: "";
+}
+main .form.block .field-pre-review-page input,
+main .form.block .field-pre-review-page select
+{
+  border-radius: 10px;
+  border-color: gray;
+  height: 50px;
+  font-size: 1.2rem;
+}
+main .form.block .field-rde-email p{
+  border: 2px solid blue;
+  display:inline-block;
+  border-radius: 14px;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
 }
 
 }
