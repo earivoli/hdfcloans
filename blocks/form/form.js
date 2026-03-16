@@ -521,32 +521,8 @@ function waitForSessionValue(callback,sessionVarName,max=30,interval=1000){
   },interval)
 
 }
-
- function waitForTheFormLoads(block){
-
-  const observer = new MutationObserver((mutations,obs)=>{
-    if(block.dataset.blockStatus === 'loaded'){
-    obs.disconnect();
-    const form = block.querySelector('form');
-      //2.Range slider
-    const amountRangeSlider = form.querySelector(".field-slider-and-loan-panel .field-loan-amount-range .range-widget-wrapper input");
-    const tenureRangeSlider = form.querySelector(".field-emi-tenure-panel .field-loan-tenure-range .range-widget-wrapper input");
-    let offerAmount = 1500000
-    let tenure = 84;
-    sessionStorage.removeItem("Overall_Amount_In_body");
-    sessionStorage.removeItem("emi_tenure_input");
-    if(amountRangeSlider && tenureRangeSlider){
-        waitForSessionValue((amount)=>{
-          offerAmount = amount;
-          sliderToupdate(amountRangeSlider,50000,offerAmount,offerAmount);
-          },"Overall_Amount_In_body")
-        waitForSessionValue((tenureTemp)=>{
-          tenure = tenureTemp;
-          sliderToupdate(tenureRangeSlider,12,tenure,tenure);
-        },"emi_tenure_input")  
-    }
-    
-    //thankyou page
+function setImagesInThankyouPage(){
+   //thankyou page
     const thankyouTextElement = document.querySelector('main .form.block .field-sub-card-panel-1 .field-plain-text1771837437953:first-of-type p p');
     if(thankyouTextElement){
       const imageForThankyou = document.createElement('img')
@@ -572,9 +548,9 @@ function waitForSessionValue(callback,sessionVarName,max=30,interval=1000){
           image1Elementparent.appendChild(imag1);
       }
     /* End of thnakyou */
+}
 
-    /* Thankyou timer */
-
+function headerImageFromJs(){
     const headerImage1 = document.querySelectorAll('main .form.block .field-hdfc-header-logo-1st picture source');
     const headerImage1InIMG = document.querySelector('main .form.block .field-hdfc-header-logo-1st picture img');
     if(headerImage1 && headerImage1InIMG){
@@ -583,7 +559,6 @@ function waitForSessionValue(callback,sessionVarName,max=30,interval=1000){
       })
       headerImage1InIMG.src = "https://main--hdfcloans--earivoli.aem.live/icons/hdfc/hdfc-bank-logo.svg"
     }
-
     const headerImage2 = document.querySelectorAll('main .form.block .field-hdfc-header-logo-2nd picture source');
     const headerImage2InIMG = document.querySelector('main .form.block .field-hdfc-header-logo-2nd picture img');
 
@@ -594,17 +569,33 @@ function waitForSessionValue(callback,sessionVarName,max=30,interval=1000){
       console.log(headerImage2InIMG)
       headerImage2InIMG.src = "https://main--hdfcloans--earivoli.aem.live/icons/hdfc/hdfc_right_logo.png"
     }
-  
+}
+function setResendOTPTimer(){
+    let counter = 30; // updated from 30
+
+    const element = document.querySelector('main .form.block .field-plain-text-6180753531771576746577 strong');
+    if(element){
+    const interval = setInterval(() => {
+    console.log(counter);
+    element.innerText = counter-- + " seconds";
+      if (counter < 0) {
+        clearInterval(interval);
+      }
+    }, 1000);
+  }
+}
+ async function waitForTheFormLoads(block){
+  const observer = new MutationObserver((mutations,obs)=>{
+    if(block.dataset.blockStatus === 'loaded'){
+      headerImageFromJs();
+      setImagesInThankyouPage();
     }
-    /* Thankyou Ends*/
-
-    const bu = document.querySelector('.field-verify-me-now button');
-    console.log("E",bu)
-    bu.addEventListener("click",function(e){
-    alert("Hello")
+    mutations.forEach((mutation)=>{
+      if(mutation.target.classList.contains("field-otp-panel") && mutation.target.getAttribute("data-visible")==="true"){
+          setResendOTPTimer();
+      }
     })
-
-
+    
   });
 
   observer.observe(block,{
@@ -613,29 +604,16 @@ function waitForSessionValue(callback,sessionVarName,max=30,interval=1000){
     childList:true,
     subtree:true
   })
+
+  observer.observe(block,{
+    attributes:true,
+    attributeFilter:['data-visible'],
+    childList:true,
+    subtree:true
+  })
 }
 
-function sliderToupdate(rangeSlider,min,max,value){
-  if(rangeSlider){
-        const NumMin = Number(min);
-        const NumMax = Number(max);
-        const NumVal = Number(value);
-        rangeSlider.max = NumMax;
-        rangeSlider.min = NumMin
-        rangeSlider.value = NumVal;
-        console.log("Min,max,range",min,max,rangeSlider)
-        const wrapper = rangeSlider.parentElement;
-        console.log(wrapper)
-        const rangeMin = wrapper.querySelector(".range-min");
-        const rangeMax = wrapper.querySelector(".range-max");
-        const rangeBubble = wrapper.querySelector(".range-bubble");
-        rangeMin.innerText = NumMin;
-        rangeMax.innerText = NumMax;
-        rangeBubble.innerText=NumVal;
-        rangeSlider.dispatchEvent(new Event("input",{bubbles:true}))
-        rangeSlider.dispatchEvent(new Event("change",{bubbles:true}))
-      }
-}
+
 
 
 export default async function decorate(block) {
