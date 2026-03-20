@@ -793,4 +793,9 @@ main .form.block .field-verify-account-page .field-main-panel-in-sv legend{
   font-weight: bold;
 }
 
+main .form.block .field-back-to-home-modal .close-button{
+  display: none;
+  pointer-events: none;
+}
+
 }
